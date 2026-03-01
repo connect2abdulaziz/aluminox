@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 import HomePage from "@/components/HomePage";
 import AboutUs from "@/components/AboutUs";
@@ -14,11 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: "ease-out-cubic",
-      once: true, // animate only once
-    });
+    AOS.refresh();
   }, []);
 
   return (

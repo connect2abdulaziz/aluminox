@@ -1,9 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const milestones = [
   {
     date: "January 2019",
@@ -36,15 +32,6 @@ const milestones = [
 ];
 
 export default function AboutTimeline() {
-  // Initialize AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-  }, []);
-
   return (
     <section className="bg-black py-28">
       <div className="max-w-6xl mx-auto px-6">

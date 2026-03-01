@@ -2,18 +2,14 @@
 
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 import PageHero from "@/components/shared/PageHero";
 import Footer from "@/components/Footer";
 import ServicesSection from "@/components/Services/ServicesSection";
+
 export default function ServicesPage() {
   useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: "ease-out-cubic",
-      once: true,
-    });
+    AOS.refresh();
   }, []);
 
   return (
