@@ -35,7 +35,7 @@ export default function Portfolio() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-semibold mb-4 text-[#3FA815] text-sm">
+          <p className="uppercase tracking-widest font-semibold mb-4 text-[#31572C] text-sm">
             Portfolio
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4 text-white">
@@ -65,7 +65,7 @@ export default function Portfolio() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-zinc-900/90 via-zinc-900/40 to-transparent" />
                 <div className="absolute bottom-3 left-4 flex items-center gap-2">
-                  <span className="inline-flex items-center rounded-full bg-[#3FA815]/90 px-3 py-1 text-xs font-medium text-white">
+                  <span className="inline-flex items-center rounded-full bg-[#31572C]/90 px-3 py-1 text-xs font-medium text-white">
                     {project.category}
                   </span>
                 </div>
@@ -90,7 +90,7 @@ export default function Portfolio() {
             className="inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
             style={{
               background:
-                "linear-gradient(90deg, #2E7D10 0%, #6EDB3A 40%, #3FA815 55%, #2E7D10 70%, #3FA815 100%)",
+                "linear-gradient(90deg, #2E7D10 0%, #6EDB3A 40%, #31572C 55%, #2E7D10 70%, #31572C 100%)",
             }}
           >
             View Full Portfolio

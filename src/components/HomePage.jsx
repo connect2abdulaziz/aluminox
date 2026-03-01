@@ -58,7 +58,7 @@ export default function HomePage() {
               data-aos="fade-up"
               data-aos-delay="200"
               className="text-3xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
-              ONE STOP SOLUTION FOR ALL YOUR <span className="text-[#3FA815]">GLAZING</span>  REQUIREMENTS
+              ONE STOP SOLUTION FOR ALL YOUR <span className="text-[#31572C]">GLAZING</span>  REQUIREMENTS
             </h1>
 
             {/* Sub Paragraph */}
@@ -85,10 +85,9 @@ export default function HomePage() {
           linear-gradient(
             90deg,
             #2E7D10 0%,
-            #6EDB3A 40%,
-            #3FA815 50%,
-            #2E7D10 60%,
-            #3FA815 100%
+            #2E7D10 50%,
+            #31572C 700%,
+            #31572C 100%
           )
         `,
       }}

@@ -28,7 +28,7 @@ export default function FeatureGrid() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-semibold mb-4 text-[#3FA815] text-sm">
+          <p className="uppercase tracking-widest font-semibold mb-4 text-[#31572C] text-sm">
             Our Strengths
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4 text-white">
@@ -74,7 +74,7 @@ data-aos-once="true"
 
   {/* Outer ring */}
   <div className="relative w-16 h-16 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center">
-    <div className="w-12 h-12 rounded-full bg-[#3FA815] flex items-center justify-center">
+    <div className="w-12 h-12 rounded-full bg-[#31572C] flex items-center justify-center">
       <Icon
         size={22}
         className="text-white"

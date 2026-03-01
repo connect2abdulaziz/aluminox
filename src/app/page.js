@@ -25,7 +25,7 @@ export default function Home() {
           <FeatureGrid />
           <WhatWeDo />
           <Portfolio />
-          <Testimonials />
+          {/* <Testimonials /> */}
           <CallToAction />
           <Footer />
         </div>
