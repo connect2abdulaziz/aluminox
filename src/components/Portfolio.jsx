@@ -90,7 +90,7 @@ export default function Portfolio() {
             className="inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
             style={{
               background:
-                "linear-gradient(90deg, #2E7D10 0%, #6EDB3A 40%, #31572C 55%, #2E7D10 70%, #31572C 100%)",
+                "linear-gradient(90deg, #2E7D10 0%, #2E7D10 70%, #31572C 100%)",
             }}
           >
             View Full Portfolio

@@ -39,7 +39,7 @@ export default function WhatWeDo() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="mb-14 text-center" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-semibold mb-4 text-[#3FA815] text-sm">
+          <p className="uppercase tracking-widest font-semibold mb-4 text-[#31572C] text-sm">
             What We Do
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4">
@@ -88,7 +88,7 @@ export default function WhatWeDo() {
             className="relative inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
             style={{
               background:
-                "linear-gradient(90deg, #2E7D10 0%, #6EDB3A 40%, #3FA815 55%, #2E7D10 70%, #3FA815 100%)",
+                "linear-gradient(90deg,s #2E7D10 0%, #2E7D10 70%, #31572C 100%)",
             }}
           >
             Explore More Services
