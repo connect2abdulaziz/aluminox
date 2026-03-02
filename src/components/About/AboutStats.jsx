@@ -18,7 +18,7 @@ const stats = [
 
 export default function AboutStats() {
   return (
-    <section className="relative py-20 lg:py-28 bg-card border-y border-card-border">
+    <section className=" feature-grid-section relative py-20 lg:py-28 bg-card border-y border-card-border">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           {stats.map((stat, index) => (

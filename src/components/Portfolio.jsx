@@ -32,7 +32,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-24 px-6 lg:px-20">
+    <section id="portfolio" className="relative subtle-grid-bg py-24 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">

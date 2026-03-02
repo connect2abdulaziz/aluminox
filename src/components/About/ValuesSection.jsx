@@ -29,10 +29,24 @@ const philosophy = [
     icon: Zap,
   },
 ];
+const images = [
+  {
+    name: "Project One",
+    src: "/images/policies/environment-policy.png", // replace with your actual path
+  },
+  {
+    name: "Project Two",
+    src: "/images/policies/health-and-safety-policies.png",
+  },
+  {
+    name: "Project Three",
+    src: "/images/policies/quality-policies.png",
+  },
+];
 
 export default function ValuesSection() {
   return (
-    <section className="py-28 px-6 lg:px-20 min-h-[600px]">
+    <section className="subtle-grid-bg py-28 px-6 lg:px-20 min-h-[600px]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
 
         {/* LEFT SIDE - sticky */}
@@ -43,7 +57,7 @@ export default function ValuesSection() {
         >
 
           {/* badge */}
-          <span className="inline-block border border-[#003611] text-[#003611] text-xs font-semibold px-4 py-2 mb-6">
+          <span className="inline-block  bg-[#003611] text-white text-md font-bold px-4 py-2 mb-6">
             OUR VALUES
           </span>
 
@@ -68,32 +82,26 @@ export default function ValuesSection() {
 
         </div>
 
-        {/* RIGHT SIDE GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-page">
+        {/* RIGHT SIDE - STACKED IMAGES */}
+        <div className="flex flex-col gap-10">
 
-          {philosophy.map(({ title, icon: Icon }, idx) => (
+          {images.map(({ name, src }, idx) => (
             <div
               key={idx}
-              className="border bg-page shadow-sm border-zinc-800 p-10 relative group hover:border-[#003611] transition duration-300"
+              className="relative border bg-page shadow-sm border-zinc-800 overflow-hidden group hover:border-[#003611] transition duration-300 h-[400px]"
               data-aos="fade-up"
               data-aos-delay={idx * 120}
               data-aos-duration="600"
               data-aos-once="true"
             >
-              <Icon
-                size={40}
-                className="text-white mb-10 opacity-90 group-hover:text-[#003611] transition"
+              <Image
+                src={src}
+                alt={name}
+                fill
+                className="object-cover group-hover:scale-105 transition duration-500"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgZmlsbD0nI2IyYjJiMicgLz48L3N2Zz4="
               />
-
-              <h3 className="text-white font-semibold text-lg leading-snug">
-                {title}
-              </h3>
-
-              {/* subtle hover arrow */}
-              {/* <ArrowUpRight
-                size={18}
-                className="absolute top-6 right-6 text-zinc-500 group-hover:text-[#003611] transition"
-              /> */}
             </div>
           ))}
 

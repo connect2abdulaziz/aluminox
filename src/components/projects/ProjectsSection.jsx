@@ -24,7 +24,8 @@ export default function ProjectsSection() {
     : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section ref={sectionRef} className="container max-w-6xl mx-auto px-4 py-20">
+    <div className="subtle-grid-bg">
+      <section ref={sectionRef} className="container max-w-6xl mx-auto px-4 py-20">
         <div   className="sticky top-18 lg:top-24 z-40 bg-page  border-white/10">
       <ProjectFilters
         active={activeFilter}
@@ -38,5 +39,6 @@ export default function ProjectsSection() {
         ))}
       </div>
     </section>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ import { ShieldCheck, HardHat } from "lucide-react";
 
 export default function AboutCompany() {
   return (
-    <section className="text-white py-24">
+    <section className=" subtle-grid-bg text-white py-24">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
 
         {/* LEFT COLUMN */}

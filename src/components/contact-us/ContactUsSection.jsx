@@ -99,7 +99,7 @@ export default function ContactUsSection() {
     ];
 
     return (
-        <section className="text-white py-24">
+        <section className="text-white py-24 subtle-grid-bg">
             <div className="container max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-start">
 
                 {/* Left Content */}

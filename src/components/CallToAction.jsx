@@ -6,7 +6,7 @@ export default function CallToAction() {
   return (
     <section
       id="contact"
-      className="relative py-24 px-6 lg:px-20"
+      className="feature-grid-section  relative py-24 px-6 lg:px-20"
       aria-labelledby="cta-heading"
     >
       <div className="relative z-10 max-w-6xl mx-auto">

@@ -33,7 +33,7 @@ const milestones = [
 
 export default function AboutTimeline() {
   return (
-    <section className="py-28">
+    <section className="subtle-grid-bg py-28">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}

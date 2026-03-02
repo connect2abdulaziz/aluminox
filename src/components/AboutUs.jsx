@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function AboutUs() {
     return (
-        <section className="relative z-10 w-full py-20 px-6 lg:px-0 lg:py-25">
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <section className=" relative subtle-grid-bg z-10 w-full py-20 px-6 lg:px-0 lg:py-25">
+            <div className="max-w-6xl mx-auto  grid lg:grid-cols-2 gap-10 items-center">
 
                 {/* LEFT IMAGE GRID */}
                 <div className="relative">
@@ -26,7 +26,7 @@ export default function AboutUs() {
                             >
 
                                 {/* 🔹 Hover transform happens here */}
-                                <div className="relative h-64 rounded-md transition-all duration-300 ease-out hover:shadow-[0_0_50px_rgba(63,168,21,0.9)]">
+                                <div className="relative h-64 rounded-md transition-all duration-300 ease-out hover:shadow-[0_0_50px_rgba(63,168,21,0.4)]">
                                     <div className="relative h-full w-full overflow-hidden rounded-md transition-transform duration-300 ease-out hover:scale-105">
                                         <Image
                                             src={src}

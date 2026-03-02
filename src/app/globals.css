@@ -130,3 +130,49 @@ body {
 
   pointer-events: none;
 }
+
+/* Subtle grid background – for use on other sections */
+.subtle-grid-bg {
+  position: relative;
+}
+
+.subtle-grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  /* Much softer, wider-spaced grid lines */
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.03) 0px,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.03) 0px,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px,
+      transparent 50px
+    );
+
+  /* Gentle vignette so edges stay clean */
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 55%,
+    rgba(0,0,0,0.7) 80%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 55%,
+    rgba(0,0,0,0.7) 80%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}

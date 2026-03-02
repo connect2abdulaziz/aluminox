@@ -14,7 +14,7 @@ export default function ProjectsPage() {
     }, []);
 
     return (
-        <div className="min-h-screen text-white">
+        <div className="min-h-screen text-white ">
             <main>
                 <PageHero
                     image="/images/about-us-2.jpg"

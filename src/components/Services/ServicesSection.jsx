@@ -74,7 +74,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-28 px-6 lg:px-20">
+    <section className=" subtle-grid-bg py-28 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         {/* Badge */}
