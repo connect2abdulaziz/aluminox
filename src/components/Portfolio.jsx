@@ -36,7 +36,7 @@ export default function Portfolio() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-bold mb-4 text-[#003611] text-md">
+          <p className="uppercase tracking-widest mb-4 font-extrabold text-[#003611] text-md">
             Portfolio
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4 text-white">

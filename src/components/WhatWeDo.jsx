@@ -40,7 +40,7 @@ export default function WhatWeDo() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="mb-14 text-center" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-semibold mb-4 text-[#003611] text-sm">
+          <p className="uppercase tracking-widest font-extrabold mb-4 text-[#003611] text-sm">
             What We Do
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4">
