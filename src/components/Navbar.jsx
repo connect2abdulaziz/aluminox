@@ -36,7 +36,7 @@ export default function Navbar() {
         href="/"
         className="text-3xl font-semibold tracking-wide text-white hover:text-[#3FA815] transition-colors"
       >
-        ALUMINOX
+       <img src="/images/logo.jpg" alt="Aluminox" className=" w-50 h-12 rounded-lg" />
       </Link>
 
       <div className="hidden md:flex items-center">
