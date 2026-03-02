@@ -58,15 +58,17 @@ export default function HomePage() {
               data-aos="fade-up"
               data-aos-delay="200"
               className="text-3xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
-              ONE STOP SOLUTION FOR ALL YOUR <span className="text-[#31572C]">GLAZING</span>  REQUIREMENTS
+              {/* ONE STOP SOLUTION FOR ALL YOUR <span className="text-[#31572C] font-bold">GLAZING</span>  REQUIREMENTS */}
+              YOUR RELIABLE FACADE EXPERTS
             </h1>
+
 
             {/* Sub Paragraph */}
             <p
               data-aos="fade-up"
               data-aos-delay="400"
               className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-              Delivering precision aluminium, facade installation and maintenance
+              Delivering precision facade inspection & engineering
               services across the UAE with over 20 years of expertise.
             </p>
 

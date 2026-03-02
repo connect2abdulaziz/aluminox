@@ -5,8 +5,8 @@ import {
   UserCog,
   ClipboardCheck,
   BadgeCheck,
-  Cpu,
-  TrendingUp,
+  Lightbulb,
+  Clock,
 } from "lucide-react";
 
 const features = [
@@ -14,8 +14,8 @@ const features = [
   { icon: Wrench, title: "Modern Tools & Equipments" },
   { icon: ClipboardCheck, title: "Accurate Evaluations" },
   { icon: BadgeCheck, title: "Experienced Professionals" },
-  { icon: Cpu, title: "AI Powered Systems" },
-  { icon: TrendingUp, title: "Performance Tracking" },
+  { icon: Clock, title: "Timely Delivery" },
+  { icon: Lightbulb, title: "Out of the Box Solutions" },
 ];
 
 // Octagonal clip-path: rectangle with steep cut corners (block-like)
@@ -49,9 +49,9 @@ export default function FeatureGrid() {
               <div
                 key={item.title}
                 data-aos="fade-up"
-data-aos-delay={index * 150}
-data-aos-duration="900"
-data-aos-once="true"
+                data-aos-delay={index * 150}
+                data-aos-duration="900"
+                data-aos-once="true"
                 className="relative flex justify-center"
               >
                 {/* Card body – dark grey, octagonal */}
@@ -69,20 +69,20 @@ data-aos-once="true"
 
                 {/* Top badge – outer ring + green inner + icon (replaces number) */}
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex justify-center">
-  {/* Radial glow layer */}
-  <div className="absolute w-28 h-28 rounded-full bg-zinc-700/70 blur-2xl"></div>
+                  {/* Radial glow layer */}
+                  <div className="absolute w-28 h-28 rounded-full bg-zinc-700/70 blur-2xl"></div>
 
-  {/* Outer ring */}
-  <div className="relative w-16 h-16 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center">
-    <div className="w-12 h-12 rounded-full bg-[#31572C] flex items-center justify-center">
-      <Icon
-        size={22}
-        className="text-white"
-        strokeWidth={1.75}
-      />
-    </div>
-  </div>
-</div>
+                  {/* Outer ring */}
+                  <div className="relative w-16 h-16 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-[#31572C] flex items-center justify-center">
+                      <Icon
+                        size={22}
+                        className="text-white"
+                        strokeWidth={1.75}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}

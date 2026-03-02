@@ -18,12 +18,14 @@ export default function Footer() {
 
           {/* Address */}
           <div className="space-y-3 text-sm">
-            <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#3FA815]">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#31572C]">
               Office
             </h4>
-            <p>PO Box 282076</p>
-            <p>Al Quoz, Dubai</p>
-            <p>United Arab Emirates</p>
+            <p>Aluminox Technical Services LLC</p>
+            <p>PO Box: 2520</p>
+            <p>703 - Sheikah Noora Tower</p>
+            <p>Barsha Heights</p>
+            <p>Dubai, UAE</p>
           </div>
 
           {/* Contact */}
@@ -34,8 +36,10 @@ export default function Footer() {
               </h4>
               <p className="text-gray-400 text-xs mb-1">Mobile</p>
               <a
-                href="tel:+971564258458"
-                className="block hover:text-white transition-colors"
+                href="https://wa.me/971564258458"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-[#31572C] transition-colors"
               >
                 +971 56 425 8458
               </a>
@@ -43,10 +47,10 @@ export default function Footer() {
             <div>
               <p className="text-gray-400 text-xs mb-1">Phone</p>
               <a
-                href="tel:+971507867338"
+                href="tel:+971504258463"
                 className="block hover:text-white transition-colors"
               >
-                +971 50 786 7338
+                +971 50 425 8463
               </a>
             </div>
             <div>

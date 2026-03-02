@@ -46,7 +46,7 @@ export default function WhatWeDo() {
             Precision facade & Aluminium Services
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg">
-            From facades to interiors, we design, fabricate, and install
+            From facades to interiors, we design, engineer and provide consultation for
             glazing systems that are built to perform and designed to impress.
           </p>
         </div>
