@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Address */}
           <div className="space-y-3 text-sm">
-            <h4 className="text-md font-bold uppercase tracking-[0.25em] text-[#003611]">
+            <h4 className="uppercase bg-zinc-600/70 w-fit px-2 py-1 rounded-sm tracking-widest font-bold text-md mb-4">
               Office
             </h4>
             <p>Aluminox Technical Services LLC</p>
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="space-y-4 text-sm">
             <div>
-              <h4 className="text-md font-bold uppercase tracking-[0.25em] text-[#003611] mb-2">
+              <h4 className ="uppercase bg-zinc-600/70 w-fit px-2 py-1 rounded-sm tracking-widest font-bold text-md mb-4">
                 Contact
               </h4>
               <p className="text-gray-400 text-xs mb-1">Mobile</p>

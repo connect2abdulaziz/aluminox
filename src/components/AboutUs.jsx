@@ -12,8 +12,8 @@ export default function AboutUs() {
                     <div className="grid grid-cols-2 gap-5">
                         {[
                             "/images/img1.jpg",
-                            "/images/img2.jpg",
-                            "/images/img3.webp",
+                            "/images/services/facade-design-engineering-service-2.png",
+                            "/images/services/project-management-service.jpg",
                             "/images/img4.jpg",
                         ].map((src, i) => (
 
@@ -56,7 +56,7 @@ export default function AboutUs() {
                 {/* RIGHT CONTENT */}
                 <div data-aos="fade-left">
                     <p
-                        className="uppercase tracking-widest font-bold text-sm mb-4"
+                        className="uppercase bg-zinc-600/70 w-fit px-2 py-1 rounded-sm tracking-widest font-bold text-md mb-4"
                         style={{ color: "#003611" }}
                     >
                         Who We Are
