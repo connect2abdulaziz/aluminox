@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -35,7 +36,7 @@ export default function Portfolio() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-semibold mb-4 text-[#31572C] text-sm">
+          <p className="uppercase tracking-widest font-bold mb-4 text-[#003611] text-md">
             Portfolio
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4 text-white">
@@ -65,7 +66,7 @@ export default function Portfolio() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-card/90 via-card/40 to-transparent" />
                 <div className="absolute bottom-3 left-4 flex items-center gap-2">
-                  <span className="inline-flex items-center rounded-full bg-[#31572C]/90 px-3 py-1 text-xs font-medium text-white">
+                  <span className="inline-flex items-center rounded-full bg-[#003611]/90 px-3 py-1 text-xs font-medium text-white">
                     {project.category}
                   </span>
                 </div>
@@ -86,15 +87,13 @@ export default function Portfolio() {
 
         {/* CTA */}
         <div className="mt-12 text-center" data-aos="fade-up">
-          <button
-            className="inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
-            style={{
-              background:
-                "linear-gradient(90deg, #2E7D10 0%, #2E7D10 70%, #31572C 100%)",
-            }}
+          <Link
+          href="/projects"
+            className="inline-flex bg-[#003611] items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-bold text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
+          
           >
-            View Full Portfolio
-          </button>
+            View All Projects
+          </Link>
         </div>
       </div>
     </section>

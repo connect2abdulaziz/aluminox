@@ -27,31 +27,33 @@ export default function ContactUsSection() {
         setStatus("sending");
         setStatusMessage("");
 
-        try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, email, phone, subject, message }),
-            });
-            const data = await res.json();
+        // Create structured payload
+        const payload = {
+            name,
+            email,
+            phone,
+            subject,
+            message,
+            submittedAt: new Date().toISOString(),
+        };
 
-            if (!res.ok) {
-                setStatus("error");
-                setStatusMessage(data.error || "Something went wrong.");
-                return;
-            }
+        // 👇 For now just log it (as per team lead instruction)
+        console.log("Contact Form Payload:", payload);
 
+        // TODO: Integrate with backend API once submission flow is finalized
+
+        // Simulate small delay for better UX
+        setTimeout(() => {
             setStatus("success");
-            setStatusMessage("Message sent. We'll get back to you soon.");
+            setStatusMessage("Thank you! Your message has been recorded.");
+
+            // Clear form
             setName("");
             setEmail("");
             setPhone("");
             setSubject("");
             setMessage("");
-        } catch {
-            setStatus("error");
-            setStatusMessage("Failed to send. Please try again.");
-        }
+        }, 600);
     };
 
     const infoItems = [
@@ -116,7 +118,7 @@ export default function ContactUsSection() {
                             const Icon = item.icon;
                             return (
                                 <div key={index} className="flex items-start gap-4">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#31572C] text-white">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#003611] text-white">
                                         <Icon size={20} />
                                     </div>
 
@@ -130,7 +132,7 @@ export default function ContactUsSection() {
                                                             href={line.href}
                                                             target={line.href.startsWith("http") ? "_blank" : "_self"}
                                                             rel="noopener noreferrer"
-                                                            className="hover:text-[#31572C] transition-colors duration-300"
+                                                            className="hover:text-[#003611] transition-colors duration-300"
                                                         >
                                                             {line.label}
                                                         </a>
@@ -153,7 +155,7 @@ export default function ContactUsSection() {
                             href="https://www.facebook.com/people/Aluminox/100091958412975/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#31572C] hover:text-[#254622] transition"
+                            className="text-[#003611] hover:text-[#254622] transition"
                         >
                             <Facebook size={24} />
                         </a>
@@ -162,7 +164,7 @@ export default function ContactUsSection() {
                             href="https://x.com/aluminoxuae"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#31572C] hover:text-[#254622] transition"
+                            className="text-[#003611] hover:text-[#254622] transition"
                         >
                             <Twitter size={24} />
                         </a>
@@ -171,7 +173,7 @@ export default function ContactUsSection() {
                             href="https://www.linkedin.com/company/aluminox-ae"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#31572C] hover:text-[#254622] transition"
+                            className="text-[#003611] hover:text-[#254622] transition"
                         >
                             <Linkedin size={24} />
                         </a>
@@ -180,7 +182,7 @@ export default function ContactUsSection() {
                             href="https://www.instagram.com/aluminoxuae/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#31572C] hover:text-[#254622] transition"
+                            className="text-[#003611] hover:text-[#254622] transition"
                         >
                             <Instagram size={24} />
                         </a>
@@ -188,79 +190,18 @@ export default function ContactUsSection() {
                 </div>
 
                 {/* Right Form */}
-                <div className="bg-card p-10 rounded-lg border border-card-border">
-                    <h3 className="text-xl font-bold text-white mb-2 text-center">
-                        LET’S CONTACT TODAY
-                    </h3>
-
-                    <p className="text-sm text-gray-300 text-center mb-8">
-                        Send your details for quick and reliable assistance.
-                    </p>
-
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <input
-                            type="text"
-                            placeholder="Your name*"
-                            required
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
-                        />
-
-                        <input
-                            type="email"
-                            placeholder="Email address*"
-                            required
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
-                        />
-
-                        <input
-                            type="tel"
-                            placeholder="Your phone"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
-                        />
-
-                        <input
-                            type="text"
-                            placeholder="Subject"
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
-                        />
-
-                        <textarea
-                            placeholder="Message*"
-                            rows={4}
-                            required
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            className="w-full px-4 py-3 bg-page text-white border rounded-md border-gray-700 focus:border-[#31572C] outline-none resize-none"
-                        />
-
-                        {statusMessage && (
-                            <p
-                                className={`text-sm ${status === "success" ? "text-green-400" : "text-red-400"
-                                    }`}
-                            >
-                                {statusMessage}
-                            </p>
-                        )}
-
-                        <button
-                            type="submit"
-                            disabled={status === "sending"}
-                            className="inline-flex items-center gap-3 bg-[#31572C] text-white px-8 py-3 font-medium hover:bg-[#254622] transition rounded-md disabled:opacity-60 disabled:cursor-not-allowed"
-                        >
-                            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-page">
-                                <Send size={20} />
-                            </span>
-                            {status === "sending" ? "SENDING…" : "SEND A MESSAGE"}
-                        </button>
-                    </form>
+                <div className="rounded-lg">
+                    <div className="my-10 h-[500px] rounded-lg overflow-hidden border border-gray-700">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.1012625348703!2d55.1762352!3d25.0984333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6baa1c1bb797%3A0x96d68f848e7ec18a!2saluminox!5e0!3m2!1sen!2s!4v1772474299106!5m2!1sen!2s" 
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
         </section>

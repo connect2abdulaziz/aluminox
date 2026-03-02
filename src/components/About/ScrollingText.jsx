@@ -33,13 +33,13 @@ export default function ScrollingText() {
 function ScrollingItem() {
   return (
     <div className="flex items-center whitespace-nowrap">
-      <span className="text-[120px] font-extrabold uppercase tracking-tight text-transparent stroke-text transition-colors duration-500 group-hover:text-[#31572C] mr-12">
+      <span className="text-[48px] sm:text-[72px] md:text-[96px] lg:text-[120px] font-extrabold uppercase tracking-tight text-transparent stroke-text transition-colors duration-500 group-hover:text-[#003611] mr-12">
         Building Excellence
       </span>
 
       <Sparkles
   size={80}
-  className="mx-12 text-[#31572C] opacity-40"
+  className="mx-12 text-[#003611] opacity-40"
   stroke="none"
   fill="currentColor"
 />

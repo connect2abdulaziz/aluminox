@@ -30,7 +30,7 @@ export default function AboutStats() {
             >
               <p
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
-                style={{ color: "#31572C" }}
+                style={{ color: "#003611" }}
               >
                 {stat.value}
               </p>

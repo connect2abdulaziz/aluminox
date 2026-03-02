@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="relative bg-page/70 text-gray-300">
-      <div className="max-w-6xl mx-auto  py-10">
+      <div className="max-w-6xl mx-auto px-6 lg:px-1  py-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] lg:gap-x-12">
           {/* Brand + summary */}
           <div className="space-y-4">
@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Address */}
           <div className="space-y-3 text-sm">
-            <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#31572C]">
+            <h4 className="text-md font-bold uppercase tracking-[0.25em] text-[#003611]">
               Office
             </h4>
             <p>Aluminox Technical Services LLC</p>
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="space-y-4 text-sm">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#31572C] mb-2">
+              <h4 className="text-md font-bold uppercase tracking-[0.25em] text-[#003611] mb-2">
                 Contact
               </h4>
               <p className="text-gray-400 text-xs mb-1">Mobile</p>
@@ -41,7 +41,7 @@ export default function Footer() {
                 href="https://wa.me/971564258458"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-[#31572C] transition-colors"
+                className="block hover:text-[#003611] transition-colors"
               >
                 +971 56 425 8458
               </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                 height={64}
                 className="w-14 h-14 md:w-16 md:h-16 object-contain"
               />
-              <span className="text-sm font-medium text-[#31572C] group-hover:text-[#4caf50] transition-colors">
+              <span className="text-sm font-medium text-[#003611] group-hover:text-[#4caf50] transition-colors">
                 Click to connect
               </span>
             </a>

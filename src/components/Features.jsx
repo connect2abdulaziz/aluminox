@@ -28,7 +28,7 @@ export default function FeatureGrid() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-semibold mb-4 text-[#31572C] text-sm">
+          <p className="uppercase tracking-widest font-bold mb-4 text-[#003611] text-md">
             Our Strengths
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4 text-white">
@@ -56,14 +56,18 @@ export default function FeatureGrid() {
               >
                 {/* Card body – dark grey, octagonal */}
                 <div
-                  className="relative w-full max-w-xs bg-[#181818] px-7 py-14 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                  className="relative w-full max-w-xs p-px bg-white/10 shadow-[0_20px_50px_rgba(0,54,17,0.9)]"
                   style={{ clipPath: cardClipPath }}
                 >
-                  {/* Content: title only */}
-                  <div className="relative z-10 flex flex-col items-center text-center">
-                    <h3 className="text-base md:text-lg font-semibold text-white tracking-tight">
-                      {item.title}
-                    </h3>
+                  <div
+                    className="bg-[#2e2e2e] px-7 py-14"
+                    style={{ clipPath: cardClipPath }}
+                  >
+                    <div className="relative z-10 flex flex-col items-center text-center">
+                      <h3 className="text-base md:text-lg font-semibold text-white tracking-tight">
+                        {item.title}
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
@@ -74,7 +78,7 @@ export default function FeatureGrid() {
 
                   {/* Outer ring */}
                   <div className="relative w-16 h-16 rounded-full bg-card border-2 border-card-border flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-[#31572C] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-[#003611] flex items-center justify-center">
                       <Icon
                         size={22}
                         className="text-white"

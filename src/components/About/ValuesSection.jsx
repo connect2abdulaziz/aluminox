@@ -43,7 +43,7 @@ export default function ValuesSection() {
         >
 
           {/* badge */}
-          <span className="inline-block border border-[#31572C] text-[#31572C] text-xs font-semibold px-4 py-2 mb-6">
+          <span className="inline-block border border-[#003611] text-[#003611] text-xs font-semibold px-4 py-2 mb-6">
             OUR VALUES
           </span>
 
@@ -61,7 +61,7 @@ export default function ValuesSection() {
           </p>
 
           {/* CTA */}
-          {/* <button className="mt-8 flex items-center gap-2 text-white font-semibold hover:text-[#31572C] transition">
+          {/* <button className="mt-8 flex items-center gap-2 text-white font-semibold hover:text-[#003611] transition">
             Learn More
             <ArrowUpRight size={18} />
           </button> */}
@@ -69,12 +69,12 @@ export default function ValuesSection() {
         </div>
 
         {/* RIGHT SIDE GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-page">
 
           {philosophy.map(({ title, icon: Icon }, idx) => (
             <div
               key={idx}
-              className="border border-zinc-800 p-10 relative group hover:border-[#31572C] transition duration-300"
+              className="border bg-page shadow-sm border-zinc-800 p-10 relative group hover:border-[#003611] transition duration-300"
               data-aos="fade-up"
               data-aos-delay={idx * 120}
               data-aos-duration="600"
@@ -82,7 +82,7 @@ export default function ValuesSection() {
             >
               <Icon
                 size={40}
-                className="text-white mb-10 opacity-90 group-hover:text-[#31572C] transition"
+                className="text-white mb-10 opacity-90 group-hover:text-[#003611] transition"
               />
 
               <h3 className="text-white font-semibold text-lg leading-snug">
@@ -92,7 +92,7 @@ export default function ValuesSection() {
               {/* subtle hover arrow */}
               {/* <ArrowUpRight
                 size={18}
-                className="absolute top-6 right-6 text-zinc-500 group-hover:text-[#31572C] transition"
+                className="absolute top-6 right-6 text-zinc-500 group-hover:text-[#003611] transition"
               /> */}
             </div>
           ))}

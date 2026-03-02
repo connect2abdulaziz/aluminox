@@ -42,7 +42,7 @@ export default function AboutUs() {
                     </div>
 
                     {/* CENTER BADGE */}
-                    <div className="absolute top-1/2 left-1/2 w-40 h-40 -translate-x-1/2 -translate-y-1/2 bg-[#31572C] rounded-full flex flex-col items-center hover:scale-105 transition-all duration-300 ease-out justify-center shadow-xl text-center p-4">
+                    <div className="absolute top-1/2 left-1/2 w-40 h-40 -translate-x-1/2 -translate-y-1/2 bg-[#003611] rounded-full flex flex-col items-center hover:scale-105 transition-all duration-300 ease-out justify-center shadow-xl text-center p-4">
                         <span className="text-4xl font-bold" style={{ color: "#fff" }}>
                             20+
                         </span>
@@ -56,8 +56,8 @@ export default function AboutUs() {
                 {/* RIGHT CONTENT */}
                 <div data-aos="fade-left">
                     <p
-                        className="uppercase tracking-widest font-semibold mb-4"
-                        style={{ color: "#31572C" }}
+                        className="uppercase tracking-widest font-bold text-sm mb-4"
+                        style={{ color: "#003611" }}
                     >
                         Who We Are
                     </p>
@@ -77,7 +77,7 @@ export default function AboutUs() {
 
                     <Link href="/about"
                         className="px-8 py-3 text-white font-semibold rounded-full transition transform hover:scale-105"
-                        style={{ backgroundColor: "#31572C" }}
+                        style={{ backgroundColor: "#003611" }}
                     >
                         More Details
                     </Link>

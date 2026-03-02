@@ -12,7 +12,7 @@ export default function CallToAction() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Glassmorphism panel */}
         <div
-          className="mx-auto max-w-6xl rounded-3xl bg-[#31572C] border border-white/30 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur-md px-6 py-8 md:px-10 md:py-10 text-center"
+          className="mx-auto max-w-6xl rounded-3xl bg-[#003611] border border-white/30 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur-md px-6 py-8 md:px-10 md:py-10 text-center"
           data-aos="zoom-in"
         >
           <p className="uppercase tracking-widest font-semibold text-xs md:text-sm text-white/70 mb-3">
@@ -32,15 +32,15 @@ export default function CallToAction() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              className="inline-flex bg-[#31572C] items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.45)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
-              
+            <Link
+              className="inline-flex bg-[#003611] items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.45)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
+              href="/contact-us"
             >
               Request a Consultation
-            </button>
+            </Link>
 
             <Link
-              href="/#services"
+              href="/services"
               className="text-sm md:text-base font-medium text-white/80 hover:text-white underline-offset-4 hover:underline"
             >
               Explore Our Services

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
@@ -58,7 +59,7 @@ export default function HomePage() {
               data-aos="fade-up"
               data-aos-delay="200"
               className="text-3xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
-              {/* ONE STOP SOLUTION FOR ALL YOUR <span className="text-[#31572C] font-bold">GLAZING</span>  REQUIREMENTS */}
+              {/* ONE STOP SOLUTION FOR ALL YOUR <span className="text-[#003611] font-bold">GLAZING</span>  REQUIREMENTS */}
               YOUR RELIABLE FACADE EXPERTS
             </h1>
 
@@ -80,12 +81,13 @@ export default function HomePage() {
   className="inline-block"
 >
   <div className="transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
-    <button
-      className="relative px-10 py-4 rounded-full text-lg font-medium text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] bg-[#31572C]"
+    <Link
+    href="/contact-us"
+      className="relative px-10 py-4 rounded-full text-lg font-medium text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] bg-[#003611]"
      
     >
       Request a Consultation →
-    </button>
+    </Link>
   </div>
 </div>
 

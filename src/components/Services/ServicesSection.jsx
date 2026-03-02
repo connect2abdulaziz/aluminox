@@ -78,7 +78,7 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Badge */}
-        <span className="inline-block text-[#31572C] text-sm font-bold uppercase tracking-widest mb-6">
+        <span className="inline-block text-[#003611] text-sm font-bold uppercase tracking-widest mb-6">
           Explore Our Services
         </span>
 
@@ -103,13 +103,13 @@ export default function ServicesSection() {
                   {title}
                 </h3>
 
-                <div className="w-full h-px bg-[#31572C]/30 mb-5" />
+                <div className="w-full h-px bg-[#003611]/30 mb-5" />
 
                 <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                   {description}
                 </p>
 
-                {/* <button className="flex items-center gap-2 text-[#31572C] text-sm font-semibold hover:gap-3 transition-all">
+                {/* <button className="flex items-center gap-2 text-[#003611] text-sm font-semibold hover:gap-3 transition-all">
                   Learn more
                   <ArrowUpRight size={16} />
                 </button> */}
@@ -129,7 +129,7 @@ export default function ServicesSection() {
                 {/* Floating icon */}
                 <div
                   className="absolute -top-6 right-6 p-4 shadow-lg"
-                  style={{ backgroundColor: "#31572C" }}
+                  style={{ backgroundColor: "#003611" }}
                 >
                   <Icon size={24} className="text-white" />
                 </div>
