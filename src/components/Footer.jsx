@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-gray-300">
-      <div className="max-w-6xl mx-auto px-6 lg:px-15 py-12">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+    <footer className="relative bg-page/70 text-gray-300">
+      <div className="max-w-6xl mx-auto  py-10">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] lg:gap-x-12">
           {/* Brand + summary */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold tracking-wide text-white">
@@ -62,6 +64,28 @@ export default function Footer() {
                 info@aluminox.ae
               </a>
             </div>
+          </div>
+
+          {/* WhatsApp – click to connect (column shrinks to content) */}
+          <div className="flex flex-col items-center justify-center lg:items-end text-center lg:text-right w-fit lg:ml-auto">
+            <a
+              href="https://wa.me/971564258458"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex flex-col items-center gap-2 hover:opacity-90 transition-opacity"
+              aria-label="Chat on WhatsApp"
+            >
+              <Image
+                src="/images/whatsapp-logo.png"
+                alt="WhatsApp"
+                width={64}
+                height={64}
+                className="w-14 h-14 md:w-16 md:h-16 object-contain"
+              />
+              <span className="text-sm font-medium text-[#3FA815] group-hover:text-[#4caf50] transition-colors">
+                Click to connect
+              </span>
+            </a>
           </div>
         </div>
 

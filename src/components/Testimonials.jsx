@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-24 px-6 lg:px-20  bg-linear-to-b from-[#3FA815]/20 to-black">
+    <section className="relative py-24 px-6 lg:px-20 bg-linear-to-b from-[#3FA815]/20 to-page">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -46,7 +46,7 @@ export default function Testimonials() {
               key={item.name}
               data-aos="fade-up"
               data-aos-delay={index * 120}
-              className="bg-zinc-800/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-zinc-700/80 p-7 flex flex-col h-full"
+              className="bg-card rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-card-border p-7 flex flex-col h-full"
             >
               <div className="h-1 w-12 rounded-full bg-[#3FA815] mb-5" />
               <p className="text-sm md:text-base text-zinc-300 leading-relaxed mb-6">

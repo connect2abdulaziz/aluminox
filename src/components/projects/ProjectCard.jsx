@@ -1,10 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
 export default function ProjectCard({ project }) {
     return (
-        <div className="grid lg:grid-cols-2 gap-10 items-center rounded-lg border border-white/20">
+        <div className="grid lg:grid-cols-2 bg-black/30 gap-10 items-center rounded-lg border border-white/20">
             {/* Left Content */}
             <div className="p-8">
-                <span className="inline-block mb-3 py-1  text-sm font-bold bg-[#31572C]/10 text-[#31572C]">
+                <span className="inline-block mb-3 py-1 px-2 rounded-full text-sm font-bold bg-[#31572C]/10 text-[#31572C]">
                     {project.category}
                 </span>
 

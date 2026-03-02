@@ -47,7 +47,7 @@ const services = [
       description:
         "Strategic planning and monitoring to minimize project risks and maximize safety.",
       icon: Briefcase,
-      image: "/images/services/service-5.jpg",
+      image: "/images/services/risk-management-service.jpg",
     },
     {
       title: "Procurement Advise",
@@ -61,24 +61,24 @@ const services = [
       description:
         "Innovative architectural and engineering solutions for modern construction challenges.",
       icon: DraftingCompass,
-      image: "/images/services/service-7.jpg",
+      image: "/images/services/design-and-engineering.jpg",
     },
     {
       title: "Project Management",
       description:
         "Professional project coordination ensuring timely delivery and quality results.",
       icon: Building,
-      image: "/images/services/service-8.jpg",
+      image: "/images/services/project-management-service.jpg",
     },
   ];
 
 export default function ServicesSection() {
   return (
-    <section className="bg-black py-28 px-6 lg:px-20">
+    <section className="py-28 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         {/* Badge */}
-        <span className="inline-block text-[#3FA815] text-xs font-semibold uppercase tracking-widest mb-6">
+        <span className="inline-block text-[#31572C] text-sm font-bold uppercase tracking-widest mb-6">
           Explore Our Services
         </span>
 
@@ -93,7 +93,7 @@ export default function ServicesSection() {
           {services.map(({ title, description, icon: Icon, image }, idx) => (
             <div
               key={idx}
-              className="bg-zinc-900 border border-zinc-800 overflow-hidden group hover:border-zinc-700 transition duration-300"
+              className="bg-card border border-card-border overflow-hidden group hover:border-zinc-600 transition duration-300"
             >
 
               {/* Top content */}
@@ -103,13 +103,13 @@ export default function ServicesSection() {
                   {title}
                 </h3>
 
-                <div className="w-full h-px bg-[#3FA815]/30 mb-5" />
+                <div className="w-full h-px bg-[#31572C]/30 mb-5" />
 
                 <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                   {description}
                 </p>
 
-                <button className="flex items-center gap-2 text-[#3FA815] text-sm font-semibold hover:gap-3 transition-all">
+                <button className="flex items-center gap-2 text-[#31572C] text-sm font-semibold hover:gap-3 transition-all">
                   Learn more
                   <ArrowUpRight size={16} />
                 </button>
@@ -129,7 +129,7 @@ export default function ServicesSection() {
                 {/* Floating icon */}
                 <div
                   className="absolute -top-6 right-6 p-4 shadow-lg"
-                  style={{ backgroundColor: "#3FA815" }}
+                  style={{ backgroundColor: "#31572C" }}
                 >
                   <Icon size={24} className="text-white" />
                 </div>

@@ -13,7 +13,7 @@ const services = [
     title: "Facade Design & Engineering",
     description:
       "Integrated facade design and engineering solutions that combine structural precision with architectural intent. We deliver efficient, buildable systems optimized for performance and longevity.",
-    image: "/images/img2.jpg",
+    image: "/images/services/facade-design-engineering-service-2.png",
   },
   {
     title: "Facade Consultancy Services",
@@ -33,8 +33,8 @@ export default function WhatWeDo() {
       }}
     >
       {/* Dark overlay to match hero vibe */}
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-overlay/40" />
+      <div className="absolute inset-0 bg-linear-to-t from-overlay/60 via-overlay/40 to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
@@ -43,7 +43,7 @@ export default function WhatWeDo() {
             What We Do
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4">
-            Precision facade & Aluminium Services
+            Precision Facade & Aluminium Services
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg">
             From facades to interiors, we design, engineer and provide consultation for
@@ -67,7 +67,7 @@ export default function WhatWeDo() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-overlay/70 via-overlay/30 to-transparent" />
               </div>
 
               <div className="p-6 flex flex-col gap-3">

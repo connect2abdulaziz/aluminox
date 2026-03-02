@@ -2,13 +2,10 @@
 
 const stats = [
   {
-    value: "500+",
+    value: "100+",
     label: "Completed Projects",
   },
-  {
-    value: "120+",
-    label: "Skilled Workers",
-  },
+  
   {
     value: "20",
     label: "Years Experience",
@@ -21,9 +18,9 @@ const stats = [
 
 export default function AboutStats() {
   return (
-    <section className="relative py-20 lg:py-28 bg-zinc-950 border-y border-white/5">
+    <section className="relative py-20 lg:py-28 bg-card border-y border-card-border">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           {stats.map((stat, index) => (
             <div
               key={stat.label}

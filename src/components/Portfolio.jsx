@@ -4,34 +4,34 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Skyline Glass Tower",
-    category: "Commercial Facade",
-    location: "Dubai, UAE",
-    image: "/images/img1.jpg",
+    title: "AL HAMRA MALL REFURB",
+    category: "Skylight System",
+    location: "Ras Al Khaimah, UAE",
+    image: "/images/projects/al-hamra-mall.jpg",
     description:
-      "Full-height curtain wall glazing system engineered for performance, clarity, and long-span stability.",
+      "A refined skylight solution engineered to enhance natural illumination while maintaining structural integrity and weather performance for the mall refurbishment. Delivered in collaboration with Glass Room.",
   },
   {
-    title: "Harbor View Residences",
-    category: "Balconies & Railings",
+    title: "ALDAR HQ",
+    category: "Unitized Façade & ACP Cladding",
     location: "Abu Dhabi, UAE",
-    image: "/images/img2.jpg",
+    image: "/images/projects/aldar-hq.png",
     description:
-      "Custom aluminium and facade railings that maximise views while meeting strict safety and wind-load standards.",
+      "Provided detailed quantity take-off, cost planning, and strategic consultancy for the iconic Aldar HQ façade package, covering unitized systems and ACP cladding works for Swift Access.",
   },
   {
-    title: "Atrium Light Hub",
-    category: "Skylights & Canopies",
-    location: "Sharjah, UAE",
-    image: "/images/img4.jpg",
+    title: "NIKE SHOWROOM @ DDF",
+    category: "Frameless Partition",
+    location: "Dubai Airport, UAE",
+    image: "/images/projects/nike-showroom.jpg",
     description:
-      "Oversized skylight and canopy glazing bringing controlled natural light into high-traffic interior spaces.",
+      "Engineered frameless partition systems tailored for a high-traffic retail environment, ensuring clean aesthetics, durability, and precision installation at Dubai Airport.",
   },
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-24 px-6 lg:px-20 bg-zinc-950">
+    <section id="portfolio" className="relative py-24 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -54,7 +54,7 @@ export default function Portfolio() {
               key={project.title}
               data-aos="fade-up"
               data-aos-delay={index * 120}
-              className="group bg-zinc-800/90 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden border border-zinc-700/80"
+              className="group bg-card rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden border border-card-border"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -63,7 +63,7 @@ export default function Portfolio() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-zinc-900/90 via-zinc-900/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-card/90 via-card/40 to-transparent" />
                 <div className="absolute bottom-3 left-4 flex items-center gap-2">
                   <span className="inline-flex items-center rounded-full bg-[#31572C]/90 px-3 py-1 text-xs font-medium text-white">
                     {project.category}

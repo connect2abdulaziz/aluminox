@@ -18,7 +18,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white">
       <main>
         <PageHero
           image="/images/about-us-2.jpg"

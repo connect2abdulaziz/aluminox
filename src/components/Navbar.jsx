@@ -28,7 +28,7 @@ export default function Navbar() {
       data-aos-delay="400"
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-6 transition-all duration-300 ${
         scrolled
-          ? "bg-black/15 backdrop-blur-md border-b border-white/5"
+          ? "bg-page/15 backdrop-blur-md border-b border-white/5"
           : "bg-transparent"
       }`}
     >
@@ -36,7 +36,7 @@ export default function Navbar() {
         href="/"
         className="text-3xl font-semibold tracking-wide text-white hover:text-[#3FA815] transition-colors"
       >
-       <img src="/images/logo.jpg" alt="Aluminox" className=" w-50 h-12 rounded-lg" />
+       <img src="/images/logo-aluminox.png" alt="Aluminox" className=" w-50 h-12 rounded-lg" />
       </Link>
 
       <div className="hidden md:flex items-center">

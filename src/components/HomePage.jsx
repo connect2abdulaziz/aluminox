@@ -15,7 +15,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="relative z-0 w-full min-h-screen bg-black text-white">
+    <div className="relative z-0 w-full min-h-screen  text-white">
       {/* ===== Background Video (Parallax) – overflow only here so sticky nav works ===== */}
       <div
         className="absolute inset-0 overflow-hidden will-change-transform"
@@ -32,7 +32,7 @@ export default function HomePage() {
         >
           <source src="/videos/hero-bg-2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-overlay/40" />
       </div>
 
       {/* ===== Content Wrapper ===== */}
@@ -68,7 +68,7 @@ export default function HomePage() {
               data-aos="fade-up"
               data-aos-delay="400"
               className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-              Delivering precision facade inspection & engineering
+              Delivering precision Facade Inspection & Engineering
               services across the UAE with over 20 years of expertise.
             </p>
 

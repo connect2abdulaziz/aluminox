@@ -4,13 +4,13 @@ import { Sparkles } from "lucide-react";
 
 export default function ScrollingText() {
   return (
-    <div className="relative overflow-hidden bg-black py-12 group">
+    <div className="relative overflow-hidden py-12 group">
 
       {/* Left Fade */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-black to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-page to-transparent z-10" />
 
       {/* Right Fade */}
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-black to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-page to-transparent z-10" />
 
       {/* Marquee Track */}
       <div className="flex w-max animate-marquee">

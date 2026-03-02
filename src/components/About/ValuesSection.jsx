@@ -32,7 +32,7 @@ const philosophy = [
 
 export default function ValuesSection() {
   return (
-    <section className="bg-black py-28 px-6 lg:px-20 min-h-[600px]">
+    <section className="py-28 px-6 lg:px-20 min-h-[600px]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
 
         {/* LEFT SIDE - sticky */}

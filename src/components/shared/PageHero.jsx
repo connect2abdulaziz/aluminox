@@ -42,7 +42,7 @@ export default function PageHero({ image, imageAlt, title, text }) {
           sizes="100vw"
         />
         {/* Dark overlay – fits dark theme, keeps subject readable */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-overlay/40" />
         {/* Subtle green accent in gradient */}
         <div
           className="absolute inset-0 opacity-30"

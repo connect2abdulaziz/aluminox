@@ -58,32 +58,46 @@ export default function ContactUsSection() {
         {
             icon: Phone,
             title: "CONTACT US",
-            lines: ["Phone 01: +971 56 425 8458", "Phone 02: +971 50 425 8463"],
+            lines: [
+                {
+                    label: "Phone 01: +971 56 425 8458",
+                    href: "https://wa.me/971564258458", // WhatsApp link
+                },
+                {
+                    label: "Phone 02: +971 50 425 8463",
+                    href: "tel:+971504258463", // Click to call
+                },
+            ],
         },
         {
             icon: Mail,
             title: "EMAIL ADDRESS",
-            lines: ["info@aluminox.ae"],
+            lines: [
+                {
+                    label: "info@aluminox.ae",
+                    href: "mailto:info@aluminox.ae",
+                },
+            ],
         },
         {
             icon: Clock,
             title: "OPENING HOURS",
-            lines: ["Mon – Sat: 8:00 am – 5:00 pm"],
+            lines: [{ label: "Mon – Sat: 8:00 am – 5:00 pm" }],
         },
         {
             icon: MapPin,
             title: "OUR OFFICE",
             lines: [
-              "PO Box: 2520",
-              "703 - Sheikah Noora Tower",
-              "Barsha Heights",
-              "Dubai, UAE",
+                { label: "PO Box: 2520" },
+                { label: "703 - Sheikah Noora Tower" },
+                { label: "Barsha Heights" },
+                { label: "Dubai, UAE" },
             ],
-          },
+        },
     ];
 
     return (
-        <section className="bg-black text-white py-24">
+        <section className="text-white py-24">
             <div className="container max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-start">
 
                 {/* Left Content */}
@@ -110,7 +124,20 @@ export default function ContactUsSection() {
                                         <h4 className="font-semibold mb-2">{item.title}</h4>
                                         <div className="text-sm text-gray-300 space-y-1">
                                             {item.lines.map((line, i) => (
-                                                <p key={i}>{line}</p>
+                                                <p key={i}>
+                                                    {line.href ? (
+                                                        <a
+                                                            href={line.href}
+                                                            target={line.href.startsWith("http") ? "_blank" : "_self"}
+                                                            rel="noopener noreferrer"
+                                                            className="hover:text-[#31572C] transition-colors duration-300"
+                                                        >
+                                                            {line.label}
+                                                        </a>
+                                                    ) : (
+                                                        line.label
+                                                    )}
+                                                </p>
                                             ))}
                                         </div>
                                     </div>
@@ -161,7 +188,7 @@ export default function ContactUsSection() {
                 </div>
 
                 {/* Right Form */}
-                <div className="bg-[#0F1F14] p-10 rounded-lg">
+                <div className="bg-card p-10 rounded-lg border border-card-border">
                     <h3 className="text-xl font-bold text-white mb-2 text-center">
                         LET’S CONTACT TODAY
                     </h3>
@@ -177,7 +204,7 @@ export default function ContactUsSection() {
                             required
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="w-full px-4 py-3 bg-black text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
                         />
 
                         <input
@@ -186,7 +213,7 @@ export default function ContactUsSection() {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 bg-black text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
                         />
 
                         <input
@@ -194,7 +221,7 @@ export default function ContactUsSection() {
                             placeholder="Your phone"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="w-full px-4 py-3 bg-black text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
                         />
 
                         <input
@@ -202,7 +229,7 @@ export default function ContactUsSection() {
                             placeholder="Subject"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
-                            className="w-full px-4 py-3 bg-black text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
                         />
 
                         <textarea
@@ -211,14 +238,13 @@ export default function ContactUsSection() {
                             required
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            className="w-full px-4 py-3 bg-black text-white border rounded-md border-gray-700 focus:border-[#31572C] outline-none resize-none"
+                            className="w-full px-4 py-3 bg-page text-white border rounded-md border-gray-700 focus:border-[#31572C] outline-none resize-none"
                         />
 
                         {statusMessage && (
                             <p
-                                className={`text-sm ${
-                                    status === "success" ? "text-green-400" : "text-red-400"
-                                }`}
+                                className={`text-sm ${status === "success" ? "text-green-400" : "text-red-400"
+                                    }`}
                             >
                                 {statusMessage}
                             </p>
@@ -229,7 +255,7 @@ export default function ContactUsSection() {
                             disabled={status === "sending"}
                             className="inline-flex items-center gap-3 bg-[#31572C] text-white px-8 py-3 font-medium hover:bg-[#254622] transition rounded-md disabled:opacity-60 disabled:cursor-not-allowed"
                         >
-                            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-black">
+                            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-page">
                                 <Send size={20} />
                             </span>
                             {status === "sending" ? "SENDING…" : "SEND A MESSAGE"}

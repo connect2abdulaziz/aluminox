@@ -33,7 +33,7 @@ const milestones = [
 
 export default function AboutTimeline() {
   return (
-    <section className="bg-black py-28">
+    <section className="py-28">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
@@ -50,7 +50,7 @@ export default function AboutTimeline() {
         <div className="relative">
 
           {/* center vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-zinc-700 -translate-x-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-card-border -translate-x-1/2" />
 
           <div className="space-y-32">
             {milestones.map((item, index) => {
@@ -83,7 +83,7 @@ export default function AboutTimeline() {
 
                     {/* dot */}
                     <div
-                      className="w-5 h-5 rounded-full bg-[#3FA815] border-2 border-zinc-900 shadow-md"
+                      className="w-5 h-5 rounded-full bg-[#3FA815] border-2 border-card shadow-md"
                       data-aos="zoom-in"
                       data-aos-delay={index * 250 + 150}
                     />
@@ -110,7 +110,7 @@ export default function AboutTimeline() {
 function TimelineCard({ item, align }) {
   return (
     <div
-      className={`bg-zinc-900 p-8 rounded-xl shadow-lg max-w-md
+      className={`bg-card p-8 rounded-xl shadow-lg max-w-md
       ${align === "right" ? " mr-8 text-left" : "ml-8 text-left"}`}
     >
       <h3 className="text-white font-semibold text-xl md:text-2xl">

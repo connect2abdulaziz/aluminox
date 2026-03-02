@@ -12,12 +12,8 @@ export default function CallToAction() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Glassmorphism panel */}
         <div
-          className="mx-auto max-w-6xl rounded-3xl bg-white/10 border border-white/30 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur-md px-6 py-8 md:px-10 md:py-10 text-center"
+          className="mx-auto max-w-6xl rounded-3xl bg-[#31572C] border border-white/30 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur-md px-6 py-8 md:px-10 md:py-10 text-center"
           data-aos="zoom-in"
-          style={{
-            background:
-              "linear-gradient(135deg, #2E7D10 0%, #6EDB3A 35%, #31572C 50%, #1B4D0A 80%)",
-          }}
         >
           <p className="uppercase tracking-widest font-semibold text-xs md:text-sm text-white/70 mb-3">
             Ready to Start Your Project?

@@ -25,7 +25,7 @@ export default function ProjectsSection() {
 
   return (
     <section ref={sectionRef} className="container max-w-6xl mx-auto px-4 py-20">
-        <div   className="sticky top-24 z-40 bg-black/80 backdrop-blur-md  border-white/10">
+        <div   className="sticky top-24 z-40 bg-page  border-white/10">
       <ProjectFilters
         active={activeFilter}
         onChange={handleFilterChange}

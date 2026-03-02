@@ -24,7 +24,7 @@ const cardClipPath =
 
 export default function FeatureGrid() {
   return (
-    <section className="relative py-24 px-6 lg:px-20 overflow-hidden bg-zinc-950">
+    <section className="feature-grid-section relative py-24 px-6 lg:px-20 overflow-hidden bg-[#1A1A1A]">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
@@ -56,7 +56,7 @@ export default function FeatureGrid() {
               >
                 {/* Card body – dark grey, octagonal */}
                 <div
-                  className="relative w-full max-w-xs bg-zinc-900 px-7 py-14 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                  className="relative w-full max-w-xs bg-[#181818] px-7 py-14 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                   style={{ clipPath: cardClipPath }}
                 >
                   {/* Content: title only */}
@@ -70,10 +70,10 @@ export default function FeatureGrid() {
                 {/* Top badge – outer ring + green inner + icon (replaces number) */}
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex justify-center">
                   {/* Radial glow layer */}
-                  <div className="absolute w-28 h-28 rounded-full bg-zinc-700/70 blur-2xl"></div>
+                  {/* <div className="absolute w-28 h-28 rounded-full bg-card-border/70 blur-2xl"></div> */}
 
                   {/* Outer ring */}
-                  <div className="relative w-16 h-16 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center">
+                  <div className="relative w-16 h-16 rounded-full bg-card border-2 border-card-border flex items-center justify-center">
                     <div className="w-12 h-12 rounded-full bg-[#31572C] flex items-center justify-center">
                       <Icon
                         size={22}

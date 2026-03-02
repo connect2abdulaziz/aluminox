@@ -28,7 +28,7 @@ export default function ProjectFilters({ active, onChange }) {
 
   return (
     <div className="flex justify-center mb-10">
-      <div className="relative flex bg-[#31572C]/10 p-2 rounded-full">
+      <div className="relative flex bg-page/90 p-2 rounded-full">
         
         {/* Sliding Indicator */}
         <span
@@ -45,7 +45,7 @@ export default function ProjectFilters({ active, onChange }) {
               ${
                 active === filter
                   ? "text-white"
-                  : "text-[#31572C] border border-[#31572C] hover:bg-[#31572C] hover:text-white"
+                  : "text-[#31572C] font-bold border border-[#31572C] hover:bg-[#31572C] hover:text-white"
               }`}
           >
             {filter}
