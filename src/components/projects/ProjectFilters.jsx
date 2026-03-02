@@ -2,13 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 
 const filters = [
-  "All Projects",
-  "Commercial",
-  "Design & Build",
-  "New Build",
-  "Renovation",
-  "Residential",
-];
+    "All Projects",
+    "Commercial",
+    "Residential",
+    "Hospitality",
+    "Refurbishment",
+  ];
 
 export default function ProjectFilters({ active, onChange }) {
   const buttonRefs = useRef([]);

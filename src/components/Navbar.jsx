@@ -45,7 +45,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-base text-white font-medium hover:text-[#3FA815] transition-colors duration-200"
+              className="text-base text-white font-medium hover:text-[#31572C] transition-colors duration-200"
             >
               {link.label}
             </Link>
@@ -55,10 +55,10 @@ export default function Navbar() {
 
       <div data-aos="fade-up" className="hidden md:block">
         <Link
-          href="/#contact"
+          href="/contact-us"
           className="inline-block transition-transform duration-300 ease-out hover:scale-105 active:scale-95"
         >
-          <span className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-full bg-white/5 backdrop-blur-xs border border-white/30 hover:bg-[#3FA815] hover:text-black text-white transition-colors duration-300">
+          <span className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-full bg-white/5 backdrop-blur-xs border border-white/30 hover:bg-[#31572C]  text-white transition-colors duration-300">
             Get Quote
           </span>
         </Link>

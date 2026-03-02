@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutUs() {
     return (
@@ -74,12 +75,12 @@ export default function AboutUs() {
                         while delivering technically precise and economical solutions for our clients.
                     </p>
 
-                    <button
+                    <Link href="/about"
                         className="px-8 py-3 text-white font-semibold rounded-full transition transform hover:scale-105"
                         style={{ backgroundColor: "#31572C" }}
                     >
                         More Details
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

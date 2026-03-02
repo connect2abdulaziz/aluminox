@@ -38,7 +38,7 @@ export default function AboutTimeline() {
 
         {/* Heading */}
         <div className="text-center mb-24">
-          <p className="text-[#3FA815] uppercase tracking-widest text-base font-semibold">
+          <p className="text-[#31572C] uppercase tracking-widest text-base font-semibold">
             Company Story
           </p>
           <h2 className="text-5xl md:text-6xl font-bold text-white mt-4 leading-tight">
@@ -74,7 +74,7 @@ export default function AboutTimeline() {
                   <div className="relative flex flex-col items-center">
                     {/* date pill */}
                     <div
-                      className="mb-3 px-5 py-2 text-base rounded-full bg-[#3FA815] text-white shadow-lg font-semibold"
+                      className="mb-3 px-5 py-2 text-base rounded-full bg-[#31572C] text-white shadow-lg font-semibold"
                       data-aos="zoom-in"
                       data-aos-delay={index * 250 + 100}
                     >
@@ -83,7 +83,7 @@ export default function AboutTimeline() {
 
                     {/* dot */}
                     <div
-                      className="w-5 h-5 rounded-full bg-[#3FA815] border-2 border-card shadow-md"
+                      className="w-5 h-5 rounded-full bg-[#31572C] border-2 border-card shadow-md"
                       data-aos="zoom-in"
                       data-aos-delay={index * 250 + 150}
                     />
@@ -115,7 +115,7 @@ function TimelineCard({ item, align }) {
     >
       <h3 className="text-white font-semibold text-xl md:text-2xl">
         {item.title}
-        <span className="text-[#3FA815] text-sm md:text-base ml-2">
+        <span className="text-[#31572C] text-sm md:text-base ml-2">
           ({item.location})
         </span>
       </h3>

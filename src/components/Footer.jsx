@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="space-y-4 text-sm">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#3FA815] mb-2">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#31572C] mb-2">
                 Contact
               </h4>
               <p className="text-gray-400 text-xs mb-1">Mobile</p>
@@ -82,7 +82,7 @@ export default function Footer() {
                 height={64}
                 className="w-14 h-14 md:w-16 md:h-16 object-contain"
               />
-              <span className="text-sm font-medium text-[#3FA815] group-hover:text-[#4caf50] transition-colors">
+              <span className="text-sm font-medium text-[#31572C] group-hover:text-[#4caf50] transition-colors">
                 Click to connect
               </span>
             </a>
@@ -95,9 +95,9 @@ export default function Footer() {
             © {new Date().getFullYear()} Aluminox Technical Services LLC. All
             rights reserved.
           </p>
-          <p className="text-gray-500">
+          {/* <p className="text-gray-500">
             Designed for premium facade & aluminium experiences.
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

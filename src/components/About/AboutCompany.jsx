@@ -13,7 +13,7 @@ export default function AboutCompany() {
           
           {/* Top Content */}
           <div>
-            <span className="text-sm font-semibold tracking-widest uppercase text-[#3FA815]">
+            <span className="text-md font-bold tracking-widest  uppercase text-[#31572C]">
                About Company
             </span>
 
@@ -27,9 +27,9 @@ export default function AboutCompany() {
               for long-term success.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-2 text-[#3FA815] font-semibold hover:gap-3 transition-all duration-300">
+            {/* <button className="mt-8 inline-flex items-center gap-2 text-[#31572C] font-semibold hover:gap-3 transition-all duration-300">
               Join Us Now →
-            </button>
+            </button> */}
           </div>
 
           {/* Bottom Image */}
@@ -58,7 +58,7 @@ export default function AboutCompany() {
           </div>
 
           {/* Highlight Statement */}
-          <div className="border-l-4 border-[#3FA815] pl-6 text-lg text-gray-300 leading-relaxed">
+          <div className="border-l-4 border-[#31572C] pl-6 text-lg text-gray-300 leading-relaxed">
             We deliver reliable construction solutions through skilled teams,
             modern technology, and a strong commitment to long-lasting quality.
           </div>
@@ -67,7 +67,7 @@ export default function AboutCompany() {
           <div className="space-y-8">
 
             <div className="flex gap-4 items-start border-t border-gray-800 pt-6">
-              <ShieldCheck className="text-[#3FA815]" size={28} />
+              <ShieldCheck className="text-[#31572C]" size={28} />
               <div>
                 <h4 className="font-semibold text-white text-lg">
                   Quality Commitment
@@ -80,7 +80,7 @@ export default function AboutCompany() {
             </div>
 
             <div className="flex gap-4 items-start border-t border-gray-800 pt-6">
-              <HardHat className="text-[#3FA815]" size={28} />
+              <HardHat className="text-[#31572C]" size={28} />
               <div>
                 <h4 className="font-semibold text-white text-lg">
                   Trusted Expertise

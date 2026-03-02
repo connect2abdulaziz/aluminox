@@ -2,7 +2,7 @@
 
 /* Single source of truth for site background and elevated surfaces */
 :root {
-  --color-bg: #1A1A1A;
+  --color-bg: #1e1d1d;
   --color-bg-card: #18181b;
   --color-bg-card-border: #27272a;
   /* Parallax / hero overlay: always black so images stay readable regardless of --color-bg */
@@ -103,14 +103,14 @@ body {
       rgba(255,255,255,0.06) 0px,
       rgba(255,255,255,0.06) 1px,
       transparent 1px,
-      transparent 30px
+      transparent 50px
     ),
     repeating-linear-gradient(
       to bottom,
       rgba(255,255,255,0.06) 0px,
       rgba(255,255,255,0.06) 1px,
       transparent 1px,
-      transparent 30px
+      transparent 50px
     );
 
   /* Fade all 4 sides */

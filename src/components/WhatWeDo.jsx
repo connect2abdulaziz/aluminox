@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -84,15 +85,12 @@ export default function WhatWeDo() {
 
         {/* Call to action */}
         <div className="mt-12 text-center" data-aos="zoom-in">
-          <button
-            className="relative inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
-            style={{
-              background:
-                "linear-gradient(90deg,s #2E7D10 0%, #2E7D10 70%, #31572C 100%)",
-            }}
+          <Link href="/services"
+            className="relative bg-[#31572C] inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
+            
           >
             Explore More Services
-          </button>
+          </Link>
         </div>
       </div>
     </section>

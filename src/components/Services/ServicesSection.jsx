@@ -109,10 +109,10 @@ export default function ServicesSection() {
                   {description}
                 </p>
 
-                <button className="flex items-center gap-2 text-[#31572C] text-sm font-semibold hover:gap-3 transition-all">
+                {/* <button className="flex items-center gap-2 text-[#31572C] text-sm font-semibold hover:gap-3 transition-all">
                   Learn more
                   <ArrowUpRight size={16} />
-                </button>
+                </button> */}
               </div>
 
               {/* Image section */}

@@ -81,18 +81,8 @@ export default function HomePage() {
 >
   <div className="transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
     <button
-      className="relative px-10 py-4 rounded-full text-lg font-medium text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)]"
-      style={{
-        background: `
-          linear-gradient(
-            90deg,
-            #2E7D10 0%,
-            #2E7D10 50%,
-            #31572C 700%,
-            #31572C 100%
-          )
-        `,
-      }}
+      className="relative px-10 py-4 rounded-full text-lg font-medium text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] bg-[#31572C]"
+     
     >
       Request a Consultation →
     </button>

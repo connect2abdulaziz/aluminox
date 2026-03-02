@@ -19,9 +19,9 @@ export default function ProjectsSection() {
   };
   
   const filteredProjects =
-    activeFilter === "All Projects"
-      ? projects
-      : projects.filter((p) => p.category === activeFilter);
+  activeFilter === "All Projects"
+    ? projects
+    : projects.filter((p) => p.category === activeFilter);
 
   return (
     <section ref={sectionRef} className="container max-w-6xl mx-auto px-4 py-20">
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
       />
       </div>
 
-      <div className="space-y-20">
+      <div className="space-y-10">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
