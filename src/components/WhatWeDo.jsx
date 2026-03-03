@@ -40,8 +40,10 @@ export default function WhatWeDo() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="mb-14 text-center" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-extrabold mb-4 text-[#003611] text-sm">
-            What We Do
+          <p
+            className="glass-section border border-[#06511e] px-4 py-2 rounded-full inline-block"
+          >
+            <span className="relative z-10 text-white">What We Do</span>
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4">
             Precision Facade & Aluminium Services
@@ -87,7 +89,7 @@ export default function WhatWeDo() {
         <div className="mt-12 text-center" data-aos="zoom-in">
           <Link href="/services"
             className="relative bg-[#003611] inline-flex items-center justify-center px-9 py-3 rounded-full text-sm md:text-base font-medium text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.97]"
-            
+
           >
             Explore More Services
           </Link>

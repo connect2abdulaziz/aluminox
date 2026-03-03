@@ -57,9 +57,12 @@ export default function ValuesSection() {
         >
 
           {/* badge */}
-          <span className="inline-block  bg-[#003611] text-white text-md font-bold px-4 py-2 mb-6">
-            OUR VALUES
-          </span>
+          <p
+            className="glass-section border border-[#06511e] px-4 py-2 rounded-full inline-block"
+
+          >
+            <span className="relative z-10 text-white">OUR VALUES</span>
+          </p>
 
           {/* heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">

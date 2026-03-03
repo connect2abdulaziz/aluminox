@@ -56,10 +56,10 @@ export default function AboutUs() {
                 {/* RIGHT CONTENT */}
                 <div data-aos="fade-left">
                     <p
-                        className="uppercase bg-zinc-600/70 w-fit px-2 py-1 rounded-sm tracking-widest font-bold text-md mb-4"
-                        style={{ color: "#003611" }}
+                        className="glass-section border border-[#06511e] px-4 py-2 rounded-full inline-block"
+                        
                     >
-                        Who We Are
+                        <span className="relative z-10 text-white">Who We Are</span>
                     </p>
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">

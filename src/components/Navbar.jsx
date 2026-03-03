@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { servicesData } from "@/data/servicesData";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
   { href: "/contact-us", label: "Contact" },
 ];
@@ -15,6 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,8 +52,52 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center">
-          <div className="flex items-center gap-12 px-10 py-3 rounded-full bg-white/5 backdrop-blur-xs border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-            {navLinks.map((link) => (
+          <div className="flex items-center gap-12 px-10 py-2 rounded-full bg-white/5 backdrop-blur-xs border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+            {navLinks.slice(0, 2).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-base text-white font-medium hover:text-[#003611] transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
+            {/* Services dropdown */}
+            <div className="relative group">
+              <button
+                type="button"
+                className="flex items-center gap-1 text-base text-white font-medium hover:text-[#003611] transition-colors duration-200"
+              >
+                Services
+                <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
+              </button>
+              <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div
+  className="
+    dropdown-glass
+  "
+>
+                
+                  <Link
+                    href="/services"
+                    className="block px-4 py-1 text-sm text-white font-medium hover:bg-[#003611] hover:text-white transition-colors"
+                  >
+                    All Services
+                  </Link>
+                  <div className="h-px bg-white/20" />
+                  {servicesData.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/services/${service.slug}`}
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-[#003611] hover:text-white transition-colors"
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {navLinks.slice(2).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -69,9 +114,9 @@ export default function Navbar() {
             href="/contact-us"
             className="inline-block transition-transform duration-300 ease-out hover:scale-105 active:scale-95"
           >
-            <span className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-full bg-white/5 backdrop-blur-xs border border-white/30 hover:bg-[#003611]  text-white transition-colors duration-300">
+            {/* <span className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-full bg-white/5 backdrop-blur-xs border border-white/30 hover:bg-[#003611]  text-white transition-colors duration-300">
               Get Quote
-            </span>
+            </span> */}
           </Link>
         </div>
 
@@ -100,7 +145,7 @@ export default function Navbar() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="px-6 pt-24 pb-8 flex flex-col gap-6">
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 2).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -110,13 +155,54 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
+            <div>
+              <button
+                type="button"
+                className="flex items-center justify-between w-full text-base font-medium text-white hover:text-[#003611] transition-colors"
+                onClick={() => setServicesOpen((o) => !o)}
+              >
+                Services
+                <ChevronDown size={18} className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {servicesOpen && (
+                <div className="mt-2 pl-4 flex flex-col gap-1 border-l-2 border-white/10">
+                  <Link
+                    href="/services"
+                    className="text-sm text-zinc-400 hover:text-[#003611] transition-colors py-1"
+                    onClick={handleLinkClick}
+                  >
+                    All Services
+                  </Link>
+                  {servicesData.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/services/${service.slug}`}
+                      className="text-sm text-zinc-400 hover:text-[#003611] transition-colors py-1"
+                      onClick={handleLinkClick}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            {navLinks.slice(2).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-base font-medium text-white hover:text-[#003611] transition-colors"
+                onClick={handleLinkClick}
+              >
+                {link.label}
+              </Link>
+            ))}
+            {/* <Link
               href="/contact-us"
               className="mt-4 inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold bg-[#003611] text-white hover:bg-[#2a7e10] transition-colors"
               onClick={handleLinkClick}
             >
               Get Quote
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

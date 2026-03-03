@@ -13,9 +13,9 @@ export default function AboutCompany() {
           
           {/* Top Content */}
           <div>
-            <span className="text-md font-bold tracking-widest  uppercase text-[#003611]">
-               About Company
-            </span>
+            <p className="glass-section border border-[#06511e] px-4 py-2 rounded-full inline-block">
+              <span className="relative z-10 text-white">About Company</span>
+            </p>
 
             <h2 className="mt-4 text-4xl lg:text-5xl font-bold leading-tight">
               Building Dreams <br /> With Lasting Quality
@@ -66,7 +66,7 @@ export default function AboutCompany() {
           {/* Features */}
           <div className="space-y-8">
 
-            <div className="flex gap-4 items-start border-t border-gray-800 pt-6">
+            <div className="flex gap-4 items-start  pt-6">
               <ShieldCheck className="text-[#003611]" size={28} />
               <div>
                 <h4 className="font-semibold text-white text-lg">
@@ -79,7 +79,7 @@ export default function AboutCompany() {
               </div>
             </div>
 
-            <div className="flex gap-4 items-start border-t border-gray-800 pt-6">
+            <div className="flex gap-4 items-start  pt-6">
               <HardHat className="text-[#003611]" size={28} />
               <div>
                 <h4 className="font-semibold text-white text-lg">

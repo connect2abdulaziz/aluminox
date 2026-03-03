@@ -28,8 +28,11 @@ export default function FeatureGrid() {
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <p className="uppercase tracking-widest font-bold mb-4 text-[#003611] text-md">
-            Our Strengths
+          <p
+            className="glass-section border border-[#06511e] px-4 py-2 rounded-full inline-block"
+
+          >
+            <span className="relative z-10 text-white">Our Strengths</span>
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold tracking-tight mb-4 text-white">
             Our Edge
