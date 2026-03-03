@@ -6,7 +6,7 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 
 export default function ServiceSidebar({ currentSlug }) {
   return (
-    <div className="lg:col-span-1">
+    <div className="order-2 lg:order-1 lg:col-span-1">
       <div className="sticky top-32">
 
         {/* Yellow Container */}

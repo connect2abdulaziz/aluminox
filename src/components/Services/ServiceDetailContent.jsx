@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function ServiceDetailContent({ service }) {
   return (
-    <div className="lg:col-span-2 space-y-16">
+    <div className="order-1 lg:order-2 lg:col-span-2 space-y-16">
 
       {/* Header Section */}
       <div>
@@ -15,7 +15,7 @@ export default function ServiceDetailContent({ service }) {
           {service.intro}
         </p>
 
-        <p className="text-zinc-400 leading-relaxed">
+        <p className="text-zinc-400 text-justify leading-relaxed">
           {service.overview}
         </p>
       </div>
