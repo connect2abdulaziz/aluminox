@@ -10,10 +10,9 @@ const milestones = [
   },
   {
     date: "March 2016",
-    title: "Operational Launch",
-    location: "Dubai",
-    description:
-      "Commenced operations, delivering façade consultancy and engineering solutions with a strong emphasis on quality and compliance.",
+    title: "First Façade Project",
+    location: "Abu Dhabi", 
+    description: "Completed the first façade inspection and design project, ensuring structural integrity and thermal performance for a commercial building.",
   },
   {
     date: "May 2023",

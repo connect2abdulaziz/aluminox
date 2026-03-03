@@ -21,6 +21,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled((window.scrollY || window.pageYOffset) > 40);
     };
+    handleScroll(); // run once on mount so state is correct on first paint
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,14 +33,11 @@ export default function Navbar() {
   return (
     <>
       <nav
-  className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
   px-6 md:px-16 py-4 md:py-6 transition-all duration-300 border-b
-  ${
-    scrolled
-      ? "bg-page/15 backdrop-blur-md border-white/5"
-      : "bg-transparent border-transparent"
-  }`}
->
+  ${scrolled ? "bg-page/15 backdrop-blur-md border-white/5" : "bg-transparent border-transparent"}
+  max-md:bg-page/20 max-md:backdrop-blur-sm max-md:border-white/10`}
+      >
         <Link
           href="/"
           className="flex items-center text-3xl font-semibold tracking-wide text-white hover:text-[#003611] transition-colors"
