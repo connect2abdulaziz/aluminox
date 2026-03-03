@@ -109,18 +109,20 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Right spacer to keep menu perfectly centered */}
+        {/* Right spacer to keep menu perfectly centered (desktop only) */}
         <div className="hidden md:block w-40" />
 
-        {/* Mobile menu toggle */}
-        <button
-          type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:text-[#003611] focus:outline-none focus:ring-2 focus:ring-[#003611] focus:ring-offset-2 focus:ring-offset-transparent"
-          onClick={() => setIsOpen((open) => !open)}
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile menu toggle – wrapper always visible on small screens, never collapses */}
+        <div className="flex md:hidden items-center shrink-0 relative z-60">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] rounded-lg p-2 text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:text-[#003611] focus:outline-none focus:ring-2 focus:ring-[#003611] focus:ring-offset-2 focus:ring-offset-transparent"
+            onClick={() => setIsOpen((open) => !open)}
+            aria-label="Toggle navigation"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile slide-in menu */}
