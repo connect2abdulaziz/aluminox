@@ -72,12 +72,12 @@ export default function Navbar() {
                 <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
               </button>
               <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div
-  className="
+                <div
+                  className="
     dropdown-glass
   "
->
-                
+                >
+
                   <Link
                     href="/services"
                     className="block px-4 py-1 text-sm text-white font-medium hover:bg-[#003611] hover:text-white transition-colors"
@@ -127,15 +127,13 @@ export default function Navbar() {
 
       {/* Mobile slide-in menu */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsOpen(false)}
       >
         <div
-          className={`h-full w-full bg-page shadow-[0_0_40px_rgba(0,0,0,0.8)] transform transition-transform duration-300 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`h-full w-full bg-page shadow-[0_0_40px_rgba(0,0,0,0.8)] transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="px-6 pt-24 pb-8 flex flex-col gap-6">

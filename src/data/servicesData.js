@@ -11,26 +11,6 @@ import {
   
   export const servicesData = [
     {
-      slug: "cost-consultancy",
-      title: "Cost Consultancy",
-      shortDescription:
-        "Expert financial planning and cost control to ensure construction projects stay within budget.",
-      intro:
-        "Strategic financial planning and cost management ensuring every project remains financially controlled from inception to completion.",
-      overview:
-        "Our cost consultancy services are designed to align construction objectives with financial efficiency. We develop structured budgeting frameworks, perform detailed cost evaluations, and implement proactive cost control strategies. By continuously monitoring financial performance, we minimize overruns and enhance project value without compromising quality.",
-      image: "/images/services/service-1.jpg",
-      icon: Calculator,
-      subServices: [
-        "Budgeting",
-        "Cost Engineering",
-        "Value Engineering",
-        "Estimation",
-        "Cost Control",
-      ],
-    },
-  
-    {
       slug: "facade-inspection",
       title: "Façade Inspection",
       shortDescription:
@@ -48,6 +28,49 @@ import {
         "Thermal Inspection",
         "Acoustic Inspection",
         "Structural Evaluation",
+      ],
+    },
+  
+    {
+      slug: "design-and-engineering",
+      title: "Design & Engineering",
+      shortDescription:
+        "Innovative architectural and engineering solutions for modern construction challenges.",
+      intro:
+        "Integrated design and engineering solutions combining creativity with structural precision.",
+      overview:
+        "From concept development to advanced structural calculations, our design and engineering services ensure functional, safe, and sustainable outcomes. We provide detailed drawings, BIM modelling, and technical documentation to support seamless project execution.",
+      image: "/images/services/design-and-engineering.jpg",
+      icon: DraftingCompass,
+      subServices: [
+        "Concept Development",
+        "Shop Drawing Preparation",
+        "Structural Calculations",
+        "Fabrication Drawings Preparation",
+        "As Built Drawing Preparation",
+        "BIM Modelling",
+        "Thermal Calculations",
+        "Acoustic Calculations",
+      ],
+    },
+  
+    {
+      slug: "cost-consultancy",
+      title: "Cost Consultancy",
+      shortDescription:
+        "Expert financial planning and cost control to ensure construction projects stay within budget.",
+      intro:
+        "Strategic financial planning and cost management ensuring every project remains financially controlled from inception to completion.",
+      overview:
+        "Our cost consultancy services are designed to align construction objectives with financial efficiency. We develop structured budgeting frameworks, perform detailed cost evaluations, and implement proactive cost control strategies. By continuously monitoring financial performance, we minimize overruns and enhance project value without compromising quality.",
+      image: "/images/services/service-1.jpg",
+      icon: Calculator,
+      subServices: [
+        "Budgeting",
+        "Cost Engineering",
+        "Value Engineering",
+        "Estimation",
+        "Cost Control",
       ],
     },
   
@@ -126,29 +149,6 @@ import {
         "Negotiation",
         "Alternate Material Identification",
         "Procurement Prioritization",
-      ],
-    },
-  
-    {
-      slug: "design-and-engineering",
-      title: "Design & Engineering",
-      shortDescription:
-        "Innovative architectural and engineering solutions for modern construction challenges.",
-      intro:
-        "Integrated design and engineering solutions combining creativity with structural precision.",
-      overview:
-        "From concept development to advanced structural calculations, our design and engineering services ensure functional, safe, and sustainable outcomes. We provide detailed drawings, BIM modelling, and technical documentation to support seamless project execution.",
-      image: "/images/services/design-and-engineering.jpg",
-      icon: DraftingCompass,
-      subServices: [
-        "Concept Development",
-        "Shop Drawing Preparation",
-        "Structural Calculations",
-        "Fabrication Drawings Preparation",
-        "As Built Drawing Preparation",
-        "BIM Modelling",
-        "Thermal Calculations",
-        "Acoustic Calculations",
       ],
     },
   
