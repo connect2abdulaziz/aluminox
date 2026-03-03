@@ -27,33 +27,31 @@ export default function ContactUsSection() {
         setStatus("sending");
         setStatusMessage("");
 
-        // Create structured payload
-        const payload = {
-            name,
-            email,
-            phone,
-            subject,
-            message,
-            submittedAt: new Date().toISOString(),
-        };
+        const formData = new FormData(e.target);
 
-        // 👇 For now just log it (as per team lead instruction)
-        console.log("Contact Form Payload:", payload);
+        try {
+            const response = await fetch(
+                "https://formsubmit.co/ajax/info@aluminox.ae",
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
 
-        // TODO: Integrate with backend API once submission flow is finalized
+            const result = await response.json();
 
-        // Simulate small delay for better UX
-        setTimeout(() => {
-            setStatus("success");
-            setStatusMessage("Thank you! Your message has been recorded.");
-
-            // Clear form
-            setName("");
-            setEmail("");
-            setPhone("");
-            setSubject("");
-            setMessage("");
-        }, 600);
+            if (result.success === "true") {
+                setStatus("success");
+                setStatusMessage("Thank you! We will contact you shortly.");
+                e.target.reset();
+            } else {
+                throw new Error("Submission failed");
+            }
+        } catch (error) {
+            console.log(error);
+            setStatus("error");
+            setStatusMessage("Something went wrong. Please try again.");
+        }
     };
 
     const infoItems = [
@@ -103,7 +101,7 @@ export default function ContactUsSection() {
             <div className="container max-w-7xl mx-auto  grid lg:grid-cols-2 gap-5 md:gap-20 items-start">
                 {/* Left column: map + contact info + socials (second on mobile) */}
                 <div className="md:mt-15 mt-10 px-5 space-y-10 order-2 lg:order-1">
-                  
+
 
                     <h2 className="text-2xl md:text-4xl font-bold leading-tight">
                         GET IN TOUCH FOR <br /> PROJECT GUIDANCE
@@ -211,10 +209,17 @@ export default function ContactUsSection() {
                             Share your project details and our team will get back to you shortly.
                         </p>
 
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="space-y-4"
+                        >
+                            <input type="hidden" name="_subject" value="New Website Inquiry - Aluminox" />
+                            <input type="hidden" name="_template" value="table" />
+                            <input type="hidden" name="_captcha" value="false" />
                             <input
                                 type="text"
                                 placeholder="Your name*"
+                                name="name"
                                 required
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
@@ -224,6 +229,7 @@ export default function ContactUsSection() {
                             <input
                                 type="email"
                                 placeholder="Email address*"
+                                name="email"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -233,6 +239,7 @@ export default function ContactUsSection() {
                             <input
                                 type="tel"
                                 placeholder="Your phone"
+                                name="phone"
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
                                 className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
@@ -241,6 +248,7 @@ export default function ContactUsSection() {
                             <input
                                 type="text"
                                 placeholder="Subject"
+                                name="subject"
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
                                 className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
@@ -250,6 +258,7 @@ export default function ContactUsSection() {
                                 placeholder="Message*"
                                 rows={4}
                                 required
+                                name="message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 className="w-full px-4 py-3 bg-page text-white border rounded-md border-gray-700 focus:border-[#31572C] outline-none resize-none"
@@ -257,13 +266,14 @@ export default function ContactUsSection() {
 
                             {statusMessage && (
                                 <p
-                                    className={`text-sm ${status === "success" ? "text-green-400" : "text-red-400"
+                                    className={`text-sm ${status === "success"
+                                            ? "text-green-400"
+                                            : "text-red-400"
                                         }`}
                                 >
                                     {statusMessage}
                                 </p>
                             )}
-
                             <button
                                 type="submit"
                                 disabled={status === "sending"}

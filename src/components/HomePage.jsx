@@ -33,7 +33,7 @@ export default function HomePage() {
         >
           <source src="/videos/hero-bg-2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-overlay/40" />
+        <div className="absolute inset-0 bg-overlay/10" />
       </div>
 
       {/* ===== Content Wrapper ===== */}
