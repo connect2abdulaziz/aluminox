@@ -32,15 +32,15 @@ const philosophy = [
 const images = [
   {
     name: "Project One",
-    src: "/images/policies/environment-policy.png", // replace with your actual path
+    src: "/images/policies/Environment-Policy.jpg", // replace with your actual path
   },
   {
     name: "Project Two",
-    src: "/images/policies/health-and-safety-policies.png",
+    src: "/images/policies/Health-&-Safety-Policy.jpg",
   },
   {
     name: "Project Three",
-    src: "/images/policies/quality-policies.png",
+    src: "/images/policies/Quality-Policy.jpg",
   },
 ];
 

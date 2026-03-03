@@ -2,32 +2,39 @@
 
 const milestones = [
   {
-    date: "January 2019",
-    title: "Company Founded",
+    date: "February 2016",
+    title: "Company Established",
     location: "Dubai",
     description:
-      "Aluminox Technical Services was established to provide specialized façade consultancy and engineering services in the UAE.",
+      "Established under the name Clairvouyance, focusing on specialized façade consultancy and engineering services.",
   },
   {
-    date: "June 2019",
-    title: "First Façade Project",
-    location: "Abu Dhabi",
-    description:
-      "Completed the first façade inspection and design project, ensuring structural integrity and thermal performance for a commercial building.",
-  },
-  {
-    date: "March 2020",
-    title: "Service Expansion",
+    date: "March 2016",
+    title: "Operational Launch",
     location: "Dubai",
     description:
-      "Expanded service offerings to include risk management, procurement advisory, and project management for complex façade systems.",
+      "Commenced operations, delivering façade consultancy and engineering solutions with a strong emphasis on quality and compliance.",
   },
   {
-    date: "August 2021",
-    title: "Major Consultancy Project",
-    location: "Sharjah",
+    date: "May 2023",
+    title: "Rebranding to Aluminex",
+    location: "Dubai",
     description:
-      "Delivered detailed façade consultancy for a high-profile mixed-use development, including design optimization and cost planning.",
+      "Rebranded as Aluminex, reflecting a renewed vision, expanded expertise, and strengthened market presence.",
+  },
+  {
+    date: "August 2023",
+    title: "CFI Certification Achieved",
+    location: "Dubai",
+    description:
+      "Obtained Certified Façade Inspector (CFI) certification from IES Singapore, reinforcing commitment to industry standards and professional excellence.",
+  },
+  {
+    date: "February 2026",
+    title: "Major Expansion",
+    location: "Dubai",
+    description:
+      "Undertook significant business expansion with team enhancement and increased operational capacity to support larger and more complex projects.",
   },
 ];
 
