@@ -5,7 +5,7 @@ import AOS from "aos";
 
 import PageHero from "@/components/shared/PageHero";
 import Footer from "@/components/Footer";
-import ServicesSection from "@/components/services/ServicesSection";
+import ServicesSection from "@/components/Services/ServicesSection";
 
 export default function ServicesPage() {
   useEffect(() => {

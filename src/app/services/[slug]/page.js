@@ -1,6 +1,6 @@
 import { servicesData } from "@/data/servicesData";
-import ServiceSidebar from "@/components/services/ServiceSidebar";
-import ServiceDetailContent from "@/components/services/ServiceDetailContent";
+import ServiceSidebar from "@/components/Services/ServiceSidebar";
+import ServiceDetailContent from "@/components/Services/ServiceDetailContent";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/shared/PageHero";
 import Footer from "@/components/Footer";
