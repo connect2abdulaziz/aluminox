@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutUs() {
     return (
-        <section className=" relative subtle-grid-bg z-10 w-full py-20 px-6 lg:px-0 lg:py-25">
+        <section className="relative subtle-grid-bg z-10 w-full py-20 px-6 lg:px-0 lg:py-25 overflow-x-hidden">
             <div className="max-w-6xl mx-auto  grid lg:grid-cols-2 gap-10 items-center">
 
                 {/* LEFT IMAGE GRID */}
