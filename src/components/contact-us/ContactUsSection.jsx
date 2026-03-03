@@ -63,7 +63,7 @@ export default function ContactUsSection() {
             lines: [
                 {
                     label: "Phone 01: +971 56 425 8458",
-                    href: "https://wa.me/971564258458", // WhatsApp link
+                    href: "tel:+971564258458", // Click to call
                 },
                 {
                     label: "Phone 02: +971 50 425 8463",

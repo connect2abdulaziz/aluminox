@@ -38,7 +38,7 @@ export default function Footer() {
               </h4>
               <p className="text-gray-400 text-xs mb-1">Mobile</p>
               <a
-                href="https://wa.me/971564258458"
+                href="tel:+971564258458"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-[#003611] transition-colors"
