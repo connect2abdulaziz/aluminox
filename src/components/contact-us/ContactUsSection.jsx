@@ -99,21 +99,22 @@ export default function ContactUsSection() {
     ];
 
     return (
-        <section className="text-white py-24 subtle-grid-bg">
-            <div className="container max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-start">
+        <section className="text-white py-5 md:py-20  subtle-grid-bg">
+            <div className="container max-w-7xl mx-auto  grid lg:grid-cols-2 gap-5 md:gap-20 items-start">
+                {/* Left column: map + contact info + socials (second on mobile) */}
+                <div className="md:mt-15 mt-10 px-5 space-y-10 order-2 lg:order-1">
+                  
 
-                {/* Left Content */}
-                <div className="mt-20">
-                    <h2 className="text-4xl font-bold leading-tight mb-6">
+                    <h2 className="text-2xl md:text-4xl font-bold leading-tight">
                         GET IN TOUCH FOR <br /> PROJECT GUIDANCE
                     </h2>
 
-                    <p className="text-gray-300 max-w-xl mb-12">
+                    <p className="text-gray-300 max-w-xl">
                         Contact our team today for reliable support, clear communication,
                         and professional assistance with your construction needs.
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-10">
+                    <div className="grid sm:grid-cols-2 gap-10 mt-10">
                         {infoItems.map((item, index) => {
                             const Icon = item.icon;
                             return (
@@ -150,50 +151,46 @@ export default function ContactUsSection() {
 
 
                     {/* Social Media Links */}
-                    <div className="flex gap-5 mt-10">
+                    <div className="flex gap-4 mt-10">
                         <a
                             href="https://www.facebook.com/people/Aluminox/100091958412975/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#003611] hover:text-[#254622] transition"
+                            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#003611] text-white hover:bg-[#254622] transition-colors duration-300"
                         >
-                            <Facebook size={24} />
+                            <Facebook size={20} />
                         </a>
 
                         <a
                             href="https://x.com/aluminoxuae"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#003611] hover:text-[#254622] transition"
+                            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#003611] text-white hover:bg-[#254622] transition-colors duration-300"
                         >
-                            <Twitter size={24} />
+                            <Twitter size={20} />
                         </a>
 
                         <a
                             href="https://www.linkedin.com/company/aluminox-ae"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#003611] hover:text-[#254622] transition"
+                            className="flex h-11 w-11 items-center justify-center rounded-full  bg-[#003611] text-white hover:bg-[#254622] transition-colors duration-300"
                         >
-                            <Linkedin size={24} />
+                            <Linkedin size={20} />
                         </a>
 
                         <a
                             href="https://www.instagram.com/aluminoxuae/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#003611] hover:text-[#254622] transition"
+                            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#003611] text-white hover:bg-[#254622] transition-colors duration-300"
                         >
-                            <Instagram size={24} />
+                            <Instagram size={20} />
                         </a>
                     </div>
-                </div>
-
-                {/* Right Form */}
-                <div className="rounded-lg">
-                    <div className="my-10 h-[500px] rounded-lg overflow-hidden border border-gray-700">
+                    <div className="h-64 lg:h-[360px] rounded-lg overflow-hidden border border-gray-700">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.1012625348703!2d55.1762352!3d25.0984333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6baa1c1bb797%3A0x96d68f848e7ec18a!2saluminox!5e0!3m2!1sen!2s!4v1772474299106!5m2!1sen!2s" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.1012625348703!2d55.1762352!3d25.0984333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6baa1c1bb797%3A0x96d68f848e7ec18a!2saluminox!5e0!3m2!1sen!2s!4v1772474299106!5m2!1sen!2s"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -201,6 +198,83 @@ export default function ContactUsSection() {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
+                    </div>
+                </div>
+
+                {/* Right column: sticky form (first on mobile) */}
+                <div className="rounded-lg my-5 mx-2 order-1 lg:order-2 lg:sticky lg:top-32">
+                    <div className="bg-card border border-card-border rounded-lg p-6 lg:p-8 shadow-[0_18px_60px_rgba(0,0,0,0.6)]">
+                        <h3 className="text-2xl font-semibold mb-4">
+                            Send Us a Message
+                        </h3>
+                        <p className="text-sm text-gray-300 mb-6">
+                            Share your project details and our team will get back to you shortly.
+                        </p>
+
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <input
+                                type="text"
+                                placeholder="Your name*"
+                                required
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            />
+
+                            <input
+                                type="email"
+                                placeholder="Email address*"
+                                required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            />
+
+                            <input
+                                type="tel"
+                                placeholder="Your phone"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Subject"
+                                value={subject}
+                                onChange={(e) => setSubject(e.target.value)}
+                                className="w-full px-4 py-3 bg-page text-white rounded-md border border-gray-700 focus:border-[#31572C] outline-none"
+                            />
+
+                            <textarea
+                                placeholder="Message*"
+                                rows={4}
+                                required
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                className="w-full px-4 py-3 bg-page text-white border rounded-md border-gray-700 focus:border-[#31572C] outline-none resize-none"
+                            />
+
+                            {statusMessage && (
+                                <p
+                                    className={`text-sm ${status === "success" ? "text-green-400" : "text-red-400"
+                                        }`}
+                                >
+                                    {statusMessage}
+                                </p>
+                            )}
+
+                            <button
+                                type="submit"
+                                disabled={status === "sending"}
+                                className="inline-flex items-center gap-3 bg-[#31572C] text-white px-8 py-3 font-medium hover:bg-[#254622] transition rounded-md disabled:opacity-60 disabled:cursor-not-allowed"
+                            >
+                                <span className="flex h-10 w-10 items-center justify-center rounded-md bg-page">
+                                    <Send size={20} />
+                                </span>
+                                {status === "sending" ? "SENDING…" : "SEND A MESSAGE"}
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
