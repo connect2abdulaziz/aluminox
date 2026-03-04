@@ -204,23 +204,12 @@ body {
   /* Use page background as base */
   background-color: var(--color-bg);
 
-  /* SIRL-style grid + radial glow stack */
-  background-image:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.14), transparent 55%),
-    repeating-linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.06) 0px,
-      rgba(255, 255, 255, 0.06) 1px,
-      transparent 1px,
-      transparent 50px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.06) 0px,
-      rgba(255, 255, 255, 0.06) 1px,
-      transparent 1px,
-      transparent 50px
-    );
+  /* Subtle grayish gradient only (no grid) */
+  background-image: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.14),
+    transparent 55%
+  );
 
   border: 1px solid rgba(255, 255, 255, 0.18);
 
