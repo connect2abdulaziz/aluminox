@@ -12,7 +12,7 @@ export default function AboutCompany() {
         <div className="flex flex-col justify-between gap-12">
           
           {/* Top Content */}
-          <div>
+          <div className="mt-10">
             <p className="glass-section border border-[#06511e] px-4 py-2 rounded-full inline-block">
               <span className="relative z-10 text-white">About Company</span>
             </p>
@@ -21,11 +21,6 @@ export default function AboutCompany() {
               Building Dreams <br /> With Lasting Quality
             </h2>
 
-            <p className="mt-6 text-gray-400 max-w-lg">
-              Our construction company delivers high-quality, reliable services,
-              creating durable, efficient, and innovative building solutions
-              for long-term success.
-            </p>
 
             {/* <button className="mt-8 inline-flex items-center gap-2 text-[#003611] font-semibold hover:gap-3 transition-all duration-300">
               Join Us Now →
