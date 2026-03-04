@@ -15,7 +15,8 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false); // mobile services accordion
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,20 +64,31 @@ export default function Navbar() {
               </Link>
             ))}
             {/* Services dropdown */}
-            <div className="relative group">
+            <div
+              className="relative"
+              onMouseLeave={() => setDesktopServicesOpen(false)}
+            >
               <button
                 type="button"
-                className="flex items-center gap-1 text-base text-white font-medium hover:text-[#003611] transition-colors duration-200"
+                className="flex items-center hover:cursor-pointer gap-1 text-base text-white font-medium hover:text-[#003611] transition-colors duration-200"
+                onClick={() => setDesktopServicesOpen((open) => !open)}
+                aria-haspopup="menu"
+                aria-expanded={desktopServicesOpen}
               >
                 Services
-                <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-200 ${desktopServicesOpen ? "rotate-180" : ""}`}
+                />
               </button>
-              <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div
-                  className="
-    dropdown-glass
-  "
-                >
+              <div
+                className={`absolute left-0 top-full pt-2 transition-all duration-200 ${
+                  desktopServicesOpen
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-1 pointer-events-none"
+                }`}
+              >
+                <div className="dropdown-glass">
 
                   <Link
                     href="/services"
