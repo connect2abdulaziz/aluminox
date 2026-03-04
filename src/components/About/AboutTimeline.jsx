@@ -68,16 +68,18 @@ export default function AboutTimeline() {
                   key={index}
                   className="relative md:grid md:grid-cols-[1fr_auto_1fr] md:items-center"
                 >
-                  {/* MOBILE LAYOUT */}
-                  <div className="md:hidden mb-6 flex items-center gap-4">
-                    <div className="w-4 h-4 rounded-full bg-[#003611]" />
+                  {/* MOBILE LAYOUT: alternate left/right via alignment only; card stays centered */}
+                  <div
+                    className={`md:hidden mb-6 flex items-center gap-4 ${!isLeft ? "justify-end" : ""}`}
+                  >
+                    <div className="w-4 h-4 rounded-full bg-[#003611] shrink-0" />
                     <div className="px-4 py-1 text-sm rounded-full bg-[#003611] text-white font-semibold">
                       {item.date}
                     </div>
                   </div>
 
                   <div className="md:hidden">
-                    <TimelineCard item={item} align="left" />
+                    <TimelineCard item={item} align={isLeft ? "left" : "right"} />
                   </div>
 
                   {/* DESKTOP LEFT */}
@@ -127,10 +129,12 @@ export default function AboutTimeline() {
 }
 
 function TimelineCard({ item, align }) {
+  const textAlign = align === "right" ? "text-left" : "text-left";
+  const desktopMargin = align === "right" ? "md:mr-8" : "md:ml-8";
+
   return (
     <div
-      className={`bg-card p-8 rounded-xl shadow-lg max-w-md
-      ${align === "right" ? " mr-8 text-left" : "ml-8 text-left"}`}
+      className={`bg-card p-8 rounded-xl shadow-lg max-w-md ${desktopMargin} ${textAlign}`}
     >
       <h3 className="text-white font-semibold text-xl md:text-2xl">
         {item.title}
