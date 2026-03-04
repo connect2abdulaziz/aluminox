@@ -54,8 +54,9 @@ export default function AboutCompany() {
 
           {/* Highlight Statement */}
           <div className="border-l-4 border-[#003611] pl-6 text-lg text-gray-300 leading-relaxed">
-            We deliver reliable construction solutions through skilled teams,
-            modern technology, and a strong commitment to long-lasting quality.
+            {/* We deliver reliable construction solutions through skilled teams,
+            modern technology, and a strong commitment to long-lasting quality. */}
+            We delivers high quality reliable services creating durable, efficient and innovative building solutions for long-term success.
           </div>
 
           {/* Features */}
