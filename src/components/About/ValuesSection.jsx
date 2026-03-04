@@ -144,7 +144,7 @@ export default function ValuesSection() {
           ))}
         </div>
 
-        {isMobile && activeImage && (
+        {/* {isMobile && activeImage && (
           <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4">
             <button
               type="button"
@@ -163,7 +163,7 @@ export default function ValuesSection() {
               />
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
