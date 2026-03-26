@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Aluminox | Facade Engineering Services",
   description:
-    "Aluminox Technical Services LLC — precision aluminium, glass, and glazing solutions for facades and interiors across the UAE. Over 20 years of expertise.",
+    "Aluminox Technical Services LLC — precision aluminium and facade engineering solutions for buildings and interiors across the UAE. Over 20 years of expertise.",
+  icons: {
+    icon: "/images/fav.png",
+  },
 };
 
 export default function RootLayout({ children }) {
