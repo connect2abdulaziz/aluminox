@@ -19,12 +19,25 @@ export const metadata = {
     "Aluminox Technical Services LLC — Expert Facade Solutions in UAE. Over 20 years of expertise.",
   icons: {
     icon: [
-      { url: "/images/favicon.svg", type: "image/svg+xml" },
-      { url: "/images/favicon.ico", sizes: "any", type: "image/x-icon" },
+      {
+        url: "/favicon-48.png",
+        sizes: "48x48",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/favicon.ico",
+        sizes: "any",
+        type: "image/x-icon",
+      },
     ],
     apple: [
       {
-        url: "/images/apple-touch-icon.png",
+        url: "/apple-touch-icon.png",
         sizes: "180x180",
         type: "image/png",
       },
