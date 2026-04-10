@@ -19,7 +19,7 @@ const milestones = [
     title: "Rebranding to Aluminox",
     location: "Dubai",
     description:
-      "Rebranded as Aluminex, reflecting a renewed vision, expanded expertise, and strengthened market presence.",
+      "Rebranded as Aluminox, reflecting a renewed vision, expanded expertise, and strengthened market presence.",
   },
   {
     date: "August 2023",
